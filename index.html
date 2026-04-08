@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Verdadero/Falso</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      cursor: pointer;
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    .question-box {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🧠 Quiz V/F</h1>
+
+  <!-- CREAR PREGUNTAS -->
+  <h2>Crear pregunta</h2>
+  <input type="text" id="questionInput" placeholder="Escribe la pregunta">
+  <br>
+  <button onclick="addQuestion(true)">Correcta: Verdadero</button>
+  <button onclick="addQuestion(false)">Correcta: Falso</button>
+
+  <p id="totalQuestions">Preguntas: 0</p>
+
+  <hr>
+
+  <!-- QUIZ -->
+  <button onclick="startQuiz()">🚀 Empezar Quiz</button>
+
+  <div id="quizBox" class="question-box hidden">
+    <h2 id="questionText"></h2>
+
+    <button onclick="answer(true)">Verdadero</button>
+    <button onclick="answer(false)">Falso</button>
+
+    <p id="progress"></p>
+  </div>
+
+  <h2 id="score"></h2>
+</div>
+
+<script>
+  let questions = [];
+  let current = 0;
+  let score = 0;
+
+  function addQuestion(correctAnswer) {
+    const text = document.getElementById("questionInput").value;
+
+    if (!text) {
+      alert("Escribe una pregunta primero 😅");
+      return;
+    }
+
+    questions.push({
+      text: text,
+      answer: correctAnswer
+    });
+
+    document.getElementById("questionInput").value = "";
+    document.getElementById("totalQuestions").innerText =
+      "Preguntas: " + questions.length;
+  }
+
+  function startQuiz() {
+    if (questions.length === 0) {
+      alert("Añade al menos una pregunta bro 😤");
+      return;
+    }
+
+    current = 0;
+    score = 0;
+    document.getElementById("score").innerText = "";
+    document.getElementById("quizBox").classList.remove("hidden");
+
+    showQuestion();
+  }
+
+  function showQuestion() {
+    const q = questions[current];
+
+    document.getElementById("questionText").innerText = q.text;
+    document.getElementById("progress").innerText =
+      `Pregunta ${current + 1} / ${questions.length}`;
+  }
+
+  function answer(userAnswer) {
+    if (userAnswer === questions[current].answer) {
+      score++;
+    }
+
+    current++;
+
+    if (current < questions.length) {
+      showQuestion();
+    } else {
+      endQuiz();
+    }
+  }
+
+  function endQuiz() {
+    document.getElementById("quizBox").classList.add("hidden");
+    document.getElementById("score").innerText =
+      `🎯 Resultado: ${score} / ${questions.length}`;
+  }
+</script>
+
+</body>
+</html>
