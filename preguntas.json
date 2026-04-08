@@ -1,6 +1,7 @@
 [
   {
     "question": "A) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Es posible multiplexar a nivel de transporte utilizando puertos (como en TCP y UDP) para que varias aplicaciones usen la red a la vez.",
     "options": [
       { "text": "ATM es un protocolo exclusivo de nivel 3", "isCorrect": false },
       { "text": "Es posible multiplexar la comunicación a nivel de transporte", "isCorrect": true },
@@ -11,6 +12,7 @@
   },
   {
     "question": "B) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "La carga de red depende directamente de cuántos dispositivos estén intentando acceder simultáneamente y del protocolo de acceso al medio (como CSMA/CD).",
     "options": [
       { "text": "La carga de una red no depende de la topología de la misma", "isCorrect": false },
       { "text": "La carga de una red depende del número de nodos activos", "isCorrect": true },
@@ -21,6 +23,7 @@
   },
   {
     "question": "C) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Con el equipamiento adecuado (como switches que evitan dominios de colisión), es perfectamente posible tener concurrencia de transmisiones en redes 802.3 (Ethernet).",
     "options": [
       { "text": "No es posible realizar broadcast en redes en anillo", "isCorrect": false },
       { "text": "Para una red ATM los tiempos de espera medios son altos en condiciones de baja carga", "isCorrect": false },
@@ -31,6 +34,7 @@
   },
   {
     "question": "D) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Las redes de cable tradicionales han evolucionado a arquitecturas HFC (Híbrido de Fibra y Coaxial) para mejorar el ancho de banda y la distancia.",
     "options": [
       { "text": "Las redes troncales que dan servicios de cable utilizan combinaciones de fibra y coaxial", "isCorrect": true },
       { "text": "La dimensión de una red que utilice CSMA/CD es independiente del tiempo de propagación", "isCorrect": false },
@@ -41,6 +45,7 @@
   },
   {
     "question": "E) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "En un modelo de datagramas, los paquetes viajan de forma independiente, por lo que frecuentemente se utilizan números de secuencia (generalmente añadidos por capas superiores como TCP) para reordenarlos en el destino.",
     "options": [
       { "text": "Los circuitos virtuales utilizan una vía de transmisión dedicada", "isCorrect": false },
       { "text": "En la conmutación de paquetes los nodos siempre realizan conversión de velocidad", "isCorrect": false },
@@ -51,6 +56,7 @@
   },
   {
     "question": "F) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "El tamaño mínimo en Ethernet (64 bytes) es vital por convenio para el correcto funcionamiento de la detección de colisiones, y Ethernet (802.3) admite topologías físicas en estrella gracias a los concentradores/switches.",
     "options": [
       { "text": "Las redes ATM tienen una limitación de distancia debido al protocolo que utilizan", "isCorrect": true },
       { "text": "El término Attachment Unit Interface nunca se asocia a redes tipo Ethernet", "isCorrect": false },
@@ -61,6 +67,7 @@
   },
   {
     "question": "G) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Frame Relay puede escalar y ofrecer enlaces con velocidades superiores a los 2 Mbps E1 estándar. Además, es completamente posible encapsular ATM sobre jerarquías SDH.",
     "options": [
       { "text": "Frame Relay no permite enlaces por debajo de 2 Mbps", "isCorrect": false },
       { "text": "Frame Relay permite enlaces por encima de 2 Mbps", "isCorrect": true },
@@ -71,6 +78,7 @@
   },
   {
     "question": "H) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "TCP/IP es agnóstico al medio físico subyacente y puede operar sobre líneas serie (ej. Point-to-Point Protocol). Si un router une 3 redes, necesita 3 IPs lógicas distintas, una por cada interfaz física.",
     "options": [
       { "text": "Es posible utilizar TCP/IP sobre líneas seriales", "isCorrect": true },
       { "text": "No es posible utilizar TCP/IP en comunicaciones por satélite", "isCorrect": false },
@@ -81,6 +89,7 @@
   },
   {
     "question": "I) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "La tecnología ATM se diseñó con celdas de tamaño fijo precisamente para garantizar Calidad de Servicio (QoS) y transportar voz y video. Un router clásico puede enrutar múltiples protocolos simultáneamente (IP, IPX, etc.).",
     "options": [
       { "text": "Los datos transmitidos sobre redes Gigabit Ethernet son más rápidas que las ATM", "isCorrect": false },
       { "text": "Las redes ATM pueden transmitir video con QoS", "isCorrect": true },
@@ -91,6 +100,7 @@
   },
   {
     "question": "J) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Insertar un repetidor amplía la distancia pero también extiende el dominio de colisión en redes compartidas. Además, el overhead de protocolos hace que los tiempos de transmisión no sean matemáticamente proporcionales solo al tamaño del archivo.",
     "options": [
       { "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps", "isCorrect": false },
       { "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps", "isCorrect": true },
@@ -101,6 +111,7 @@
   },
   {
     "question": "K) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "El MTU marca un límite de tamaño por paquete que impacta en la fragmentación de los protocolos superiores. A nivel de infraestructura, una MAN tiene entidad propia y puede considerarse un eslabón aislado antes de ser parte de una WAN.",
     "options": [
       { "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU", "isCorrect": true },
       { "text": "Una MAN no puede ser parte de una WAN", "isCorrect": true },
@@ -110,6 +121,7 @@
   },
   {
     "question": "L) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Bajo ciertas métricas de diseño antiguo, se afirmaba que ciertos procesamientos de router superaban a los de bridges o al revés. Esta es teórica, pero ten en cuenta la respuesta del test.",
     "options": [
       { "text": "Un router trabaja más rápido que un bridge", "isCorrect": true },
       { "text": "Un bridge trabaja más rápido que un router", "isCorrect": false },
@@ -119,6 +131,7 @@
   },
   {
     "question": "M) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Al igual que la pregunta J, el tiempo de transmisión no obedece a una simple regla de tres directa; intervienen latencias, encapsulamiento y tiempos de procesamiento.",
     "options": [
       { "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps", "isCorrect": false },
       { "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps", "isCorrect": true },
@@ -128,6 +141,7 @@
   },
   {
     "question": "N) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Una regla de oro en TCP/IP es que no puede haber direcciones IP duplicadas operando a la vez o causará conflictos. DHCP se encarga precisamente de gestionar ese pool para evitar colisiones lógicas.",
     "options": [
       { "text": "Las redes de cable no están estandarizadas", "isCorrect": false },
       { "text": "Dos sistemas en una misma red no pueden tener IP iguales", "isCorrect": true },
@@ -137,6 +151,7 @@
   },
   {
     "question": "O) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "En Ethernet con CSMA/CD, más nodos significa mayor probabilidad de colisión y, por tanto, más retardo. Si tienes estaciones sin disco (que inician por red), necesitan acceso sin filtros severos a su servidor.",
     "options": [
       { "text": "En una red ethernet el retardo de la señal es proporcional al número de nodos activos", "isCorrect": true },
       { "text": "Es posible aplicar subnetting a una red TCP/IP sin emplear máscara de red", "isCorrect": false },
@@ -146,6 +161,7 @@
   },
   {
     "question": "P) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "En este caso, tu test marcaba todas como falsas. Un Proxy, un Firewall y NAT son conceptos diferentes que a menudo conviven en el mismo aparato, pero no son lo mismo semánticamente.",
     "options": [
       { "text": "Un Firewall es un tipo de Proxy", "isCorrect": false },
       { "text": "Un Proxy es un tipo de Firewall", "isCorrect": false },
@@ -155,6 +171,7 @@
   },
   {
     "question": "Q) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Un servidor puede correr múltiples servicios a la vez (DNS en puerto 53, DHCP en puertos 67/68) siempre que no colisionen en sus puertos de escucha.",
     "options": [
       { "text": "RDSI es un protocolo derivado de TCPIP", "isCorrect": false },
       { "text": "El protocolo ICMP es de nivel 4", "isCorrect": false },
@@ -164,6 +181,7 @@
   },
   {
     "question": "R) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Existen configuraciones específicas (ej. interfaces IP unnumbered) donde una interfaz de un router delega su dirección, no poseyendo una propia configurada tradicionalmente.",
     "options": [
       { "text": "No se puede encapsular IP sobre X.25", "isCorrect": false },
       { "text": "No se puede encapsular Ethernet sobre ATM", "isCorrect": false },
@@ -173,6 +191,7 @@
   },
   {
     "question": "S) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Los hubs gestionables requieren una IP para su interfaz de administración. Mediante VLSM o subnetting clásico es posible crear topologías con 7 subredes (usando los bits adecuados).",
     "options": [
       { "text": "Un ADM es un dispositivo de asociado a tecnologías Ethernet", "isCorrect": false },
       { "text": "Un HUB dispone de dirección IP para gestionarlo", "isCorrect": true },
@@ -182,6 +201,7 @@
   },
   {
     "question": "T) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "explicacion": "Tanto QAM (Modulación de Amplitud en Cuadratura) como PCM (Modulación por Impulsos Codificados) son técnicas de modulación. Y sí, es un estándar en la industria montar un enrutador y un cortafuegos en un mismo appliance.",
     "options": [
       { "text": "QAM es un tipo de multiplexación", "isCorrect": true },
       { "text": "PCM es un tipo de multiplexación", "isCorrect": true },

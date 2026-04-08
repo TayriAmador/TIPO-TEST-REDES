@@ -2,56 +2,69 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz Selección Múltiple</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Interactivo Avanzado</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>🧠 Quiz Selección Múltiple</h1>
+  <h1>REPASO REDES Y TECNOLOGÍAS DE LA INFORMACION</h1>
 
-  <button onclick="startQuiz()">🚀 Empezar Quiz</button>
-
-  <div id="quizBox" class="question-box hidden">
-    <h2 id="questionText"></h2>
-
-    <div id="optionsContainer"></div>
-
-    <button id="nextBtn" onclick="nextQuestion()">Siguiente</button>
-    <p id="progress"></p>
+  <div id="startScreen" class="card">
+    <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
+    <button class="btn-start" onclick="startQuiz()">Empezar Test</button>
   </div>
 
-  <h2 id="score"></h2>
+  <div id="quizBox" class="card hidden">
+    <h2 id="questionText"></h2>
+    <div id="optionsContainer" class="options-grid"></div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn" class="btn-nav" onclick="prevQuestion()">⬅ Anterior</button>
+      <span id="progress"></span>
+      <button id="nextBtn" class="btn-next" onclick="nextQuestion()">Siguiente ➡</button>
+      <button id="finishBtn" class="btn-finish hidden" onclick="endQuiz()">Finalizar </button>
+    </div>
+  </div>
+
+  <div id="summaryBox" class="card hidden">
+    <h2 id="scoreTitle"></h2>
+    <p id="scoreSubtitle" class="text-muted"></p>
+    <div id="summaryContent" class="summary-list"></div>
+    <button class="btn-start" style="margin-top: 20px;" onclick="location.reload()">Repetir Test</button>
+  </div>
 </div>
 
 <script>
   let questions = [];
   let current = 0;
-  let score = 0;
-  let selectedOptions = [];
+  let userAnswers = []; 
 
   async function loadQuestions() {
-    const response = await fetch("preguntas.json");
-    questions = await response.json();
+    try {
+      const response = await fetch("preguntas.json");
+      questions = await response.json();
+      userAnswers = new Array(questions.length).fill().map(() => []);
+    } catch (error) {
+      console.error("Error cargando las preguntas:", error);
+      document.getElementById("startScreen").innerHTML = "<p style='color:red'>Error al cargar las preguntas. Asegúrate de estar corriendo esto en un servidor (ej. Live Server o GitHub Pages).</p>";
+    }
   }
 
   function startQuiz() {
     if (questions.length === 0) {
-      alert("No hay preguntas 😅");
+      alert("Cargando preguntas... 😅");
       return;
     }
-
-    current = 0;
-    score = 0;
-    document.getElementById("score").innerText = "";
+    document.getElementById("startScreen").classList.add("hidden");
     document.getElementById("quizBox").classList.remove("hidden");
     showQuestion();
   }
 
   function showQuestion() {
     const q = questions[current];
-    selectedOptions = [];
-    document.getElementById("questionText").innerText = q.question;
+    document.getElementById("questionText").innerText = `${current + 1}. ${q.question}`;
 
     const container = document.getElementById("optionsContainer");
     container.innerHTML = "";
@@ -63,48 +76,105 @@
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.value = index;
+      
+      if (userAnswers[current].includes(index)) {
+        checkbox.checked = true;
+      }
+
       checkbox.onchange = () => {
         if (checkbox.checked) {
-          selectedOptions.push(index);
+          if (!userAnswers[current].includes(index)) {
+            userAnswers[current].push(index);
+          }
         } else {
-          selectedOptions = selectedOptions.filter(i => i !== index);
+          userAnswers[current] = userAnswers[current].filter(i => i !== index);
         }
       };
 
       label.appendChild(checkbox);
       label.appendChild(document.createTextNode(opt.text));
       container.appendChild(label);
-      container.appendChild(document.createElement("br"));
     });
 
-    document.getElementById("progress").innerText =
-      `Pregunta ${current + 1} / ${questions.length}`;
+    document.getElementById("progress").innerText = `Pregunta ${current + 1} de ${questions.length}`;
+
+    document.getElementById("prevBtn").disabled = current === 0;
+    
+    if (current === questions.length - 1) {
+      document.getElementById("nextBtn").classList.add("hidden");
+      document.getElementById("finishBtn").classList.remove("hidden");
+    } else {
+      document.getElementById("nextBtn").classList.remove("hidden");
+      document.getElementById("finishBtn").classList.add("hidden");
+    }
+  }
+
+  function prevQuestion() {
+    if (current > 0) {
+      current--;
+      showQuestion();
+    }
   }
 
   function nextQuestion() {
-    const correctIndices = questions[current].options
-      .map((opt, i) => opt.isCorrect ? i : null)
-      .filter(i => i !== null)
-      .sort();
-
-    const selectedSorted = selectedOptions.slice().sort();
-
-    if (JSON.stringify(correctIndices) === JSON.stringify(selectedSorted)) {
-      score++;
-    }
-
-    current++;
-    if (current < questions.length) {
+    if (current < questions.length - 1) {
+      current++;
       showQuestion();
-    } else {
-      endQuiz();
     }
   }
 
   function endQuiz() {
     document.getElementById("quizBox").classList.add("hidden");
-    document.getElementById("score").innerText =
-      `🎯 Resultado: ${score} / ${questions.length}`;
+    const summaryBox = document.getElementById("summaryBox");
+    summaryBox.classList.remove("hidden");
+
+    let score = 0;
+    let summaryHTML = "";
+
+    questions.forEach((q, qIndex) => {
+      const correctIndices = q.options.map((opt, i) => opt.isCorrect ? i : null).filter(i => i !== null).sort();
+      const userSelected = userAnswers[qIndex].slice().sort();
+      
+      const isRight = JSON.stringify(correctIndices) === JSON.stringify(userSelected);
+      if (isRight) score++;
+
+      summaryHTML += `
+        <div class="summary-item ${isRight ? 'correct' : 'wrong'}">
+          <h3>${qIndex + 1}. ${q.question}</h3>
+          <p>Tu resultado: <span class="${isRight ? 'correct-text' : 'wrong-text'}">${isRight ? '✔ Correcto' : '❌ Incorrecto'}</span></p>
+      `;
+
+      summaryHTML += `<ul>`;
+      q.options.forEach((opt, optIndex) => {
+         const wasSelected = userSelected.includes(optIndex);
+         const wasCorrect = correctIndices.includes(optIndex);
+         
+         if (wasCorrect || wasSelected) {
+            let icon = wasCorrect && wasSelected ? "✅" : (wasCorrect && !wasSelected ? "⚠️ (Faltó)" : "❌ (Sobró)");
+            summaryHTML += `<li>${icon} ${opt.text}</li>`;
+         }
+      });
+      summaryHTML += `</ul>`;
+
+      if (!isRight && q.explicacion) {
+        summaryHTML += `
+          <div class="explanation-box">
+            <strong>💡 Por qué fallaste:</strong> ${q.explicacion}
+          </div>
+        `;
+      }
+
+      summaryHTML += `</div>`;
+    });
+
+    document.getElementById("scoreTitle").innerText = `Resultado Final: ${score} de ${questions.length}`;
+    
+    const percentage = Math.round((score / questions.length) * 100);
+    let message = percentage >= 50 ? "¡Buen trabajo! Sigue así. 🚀" : "Necesitas repasar un poco más. ¡No te rindas! 💪";
+    document.getElementById("scoreSubtitle").innerText = `Has acertado el ${percentage}%. ${message}`;
+    
+    document.getElementById("summaryContent").innerHTML = summaryHTML;
+    window.scrollTo(0, 0);
   }
 
   loadQuestions();
