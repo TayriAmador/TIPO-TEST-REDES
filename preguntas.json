@@ -1,0 +1,192 @@
+[
+  {
+    "question": "A) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "ATM es un protocolo exclusivo de nivel 3", "isCorrect": false },
+      { "text": "Es posible multiplexar la comunicación a nivel de transporte", "isCorrect": true },
+      { "text": "El nivel de transporte no controla errores", "isCorrect": false },
+      { "text": "Los niveles 2 y 3 han de estar siempre presentes en una comunicación", "isCorrect": false },
+      { "text": "Una MAN no puede ser parte de una WAN", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "B) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "La carga de una red no depende de la topología de la misma", "isCorrect": false },
+      { "text": "La carga de una red depende del número de nodos activos", "isCorrect": true },
+      { "text": "La carga de una red depende del método de acceso empleado", "isCorrect": true },
+      { "text": "La carga de una red siempre se mejora con un cambio de tecnología de red", "isCorrect": true },
+      { "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "C) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "No es posible realizar broadcast en redes en anillo", "isCorrect": false },
+      { "text": "Para una red ATM los tiempos de espera medios son altos en condiciones de baja carga", "isCorrect": false },
+      { "text": "No es posible obtener concurrencia en redes tipo Fast Ethernet", "isCorrect": false },
+      { "text": "Es posible obtener concurrencia en una red de tipo 802.3", "isCorrect": true },
+      { "text": "Todas las redes disponen de nivel de distribución", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "D) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Las redes troncales que dan servicios de cable utilizan combinaciones de fibra y coaxial", "isCorrect": true },
+      { "text": "La dimensión de una red que utilice CSMA/CD es independiente del tiempo de propagación", "isCorrect": false },
+      { "text": "Un dispositivo hotswap significa que soporta altas temperaturas", "isCorrect": false },
+      { "text": "Un acceso básico RDSI incluye un canal E2", "isCorrect": false },
+      { "text": "Un router trabaja más rápido que un bridge", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "E) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Los circuitos virtuales utilizan una vía de transmisión dedicada", "isCorrect": false },
+      { "text": "En la conmutación de paquetes los nodos siempre realizan conversión de velocidad", "isCorrect": false },
+      { "text": "Se utilizan números de secuencia en el modelo de datagrama", "isCorrect": true },
+      { "text": "El costo en la conmutación de paquetes siempre será función del tiempo de conexión", "isCorrect": false },
+      { "text": "Un bridge trabaja más rápido que un router", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "F) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Las redes ATM tienen una limitación de distancia debido al protocolo que utilizan", "isCorrect": true },
+      { "text": "El término Attachment Unit Interface nunca se asocia a redes tipo Ethernet", "isCorrect": false },
+      { "text": "El tamaño mínimo de paquete en redes Ethernet se adoptó por convenio", "isCorrect": true },
+      { "text": "Las redes tipo 802.3 permiten topología en estrella", "isCorrect": true },
+      { "text": "Si cambio de método de acceso aumentará la velocidad de transmisión", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "G) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Frame Relay no permite enlaces por debajo de 2 Mbps", "isCorrect": false },
+      { "text": "Frame Relay permite enlaces por encima de 2 Mbps", "isCorrect": true },
+      { "text": "No se puede encapsular ATM sobre SDH", "isCorrect": true },
+      { "text": "Una MAN es siempre evolución de una LAN", "isCorrect": false },
+      { "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red y el operativo de red", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "H) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Es posible utilizar TCP/IP sobre líneas seriales", "isCorrect": true },
+      { "text": "No es posible utilizar TCP/IP en comunicaciones por satélite", "isCorrect": false },
+      { "text": "Un dispositivo de internetworking que tenga N direcciones físicas debe tener N direcciones lógicas", "isCorrect": true },
+      { "text": "Las direcciones lógicas de una red dependen de las direcciones físicas", "isCorrect": false },
+      { "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "I) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Los datos transmitidos sobre redes Gigabit Ethernet son más rápidas que las ATM", "isCorrect": false },
+      { "text": "Las redes ATM pueden transmitir video con QoS", "isCorrect": true },
+      { "text": "RDSI utiliza conmutación de paquetes con circuito virtual permanente", "isCorrect": true },
+      { "text": "RDSI utiliza conmutación de paquetes con circuito virtual conmutado", "isCorrect": false },
+      { "text": "Un mismo router soporta hasta 3 diferentes protocolos de red", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "J) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps", "isCorrect": false },
+      { "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps", "isCorrect": true },
+      { "text": "La velocidad en baudios nunca podrá ser 1/3 de la velocidad de transmisión serie", "isCorrect": false },
+      { "text": "No se puede emplear cable coaxial para transmitir en banda base", "isCorrect": true },
+      { "text": "A nivel de nivel de mejorar la carga siempre es interesante insertar un repetidor en una red", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "K) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU", "isCorrect": true },
+      { "text": "Una MAN no puede ser parte de una WAN", "isCorrect": true },
+      { "text": "Todas las redes disponen de nivel de distribución", "isCorrect": false },
+      { "text": "IP es un protocolo de nivel 4", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "L) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Un router trabaja más rápido que un bridge", "isCorrect": true },
+      { "text": "Un bridge trabaja más rápido que un router", "isCorrect": false },
+      { "text": "A nivel de mejorar la carga siempre es interesante insertar un repetidor en una red", "isCorrect": true },
+      { "text": "Un Protocol Soopf es una solución más eficiente que un Gateway", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "M) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps", "isCorrect": false },
+      { "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps", "isCorrect": true },
+      { "text": "La velocidad en baudios nunca podrá ser 1/3 de la velocidad de transmisión serie", "isCorrect": false },
+      { "text": "No se puede emplear cable coaxial para transmitir en banda base", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "N) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Las redes de cable no están estandarizadas", "isCorrect": false },
+      { "text": "Dos sistemas en una misma red no pueden tener IP iguales", "isCorrect": true },
+      { "text": "En una red con DHCP no puede ocurrir que 2 máquinas tengan el mismo IP", "isCorrect": true },
+      { "text": "ICMP permite realizar redirección de protocolo de sesión", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "O) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "En una red ethernet el retardo de la señal es proporcional al número de nodos activos", "isCorrect": true },
+      { "text": "Es posible aplicar subnetting a una red TCP/IP sin emplear máscara de red", "isCorrect": false },
+      { "text": "No es posible conectar un servidor de ficheros al lado de un bridge si del otro extremo cuelgan estaciones sin disco", "isCorrect": true },
+      { "text": "No es posible conectar 2 routers en configuración redundante", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "P) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Un Firewall es un tipo de Proxy", "isCorrect": false },
+      { "text": "Un Proxy es un tipo de Firewall", "isCorrect": false },
+      { "text": "Un NAT es una funcionalidad poco adecuada para un sistema Firewall", "isCorrect": false },
+      { "text": "Un Proxy-Firewall es un tipo de NAT", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Q) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "RDSI es un protocolo derivado de TCPIP", "isCorrect": false },
+      { "text": "El protocolo ICMP es de nivel 4", "isCorrect": false },
+      { "text": "El servicio DHCP puede ejecutarse sobre una máquina con DNS", "isCorrect": true },
+      { "text": "El servicio FTP utiliza el puerto 1023 para transferencia de datos", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "R) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "No se puede encapsular IP sobre X.25", "isCorrect": false },
+      { "text": "No se puede encapsular Ethernet sobre ATM", "isCorrect": false },
+      { "text": "Un router puede que no tenga direcciones lógicas", "isCorrect": true },
+      { "text": "Un router puede que no tenga direcciones físicas", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "S) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Un ADM es un dispositivo de asociado a tecnologías Ethernet", "isCorrect": false },
+      { "text": "Un HUB dispone de dirección IP para gestionarlo", "isCorrect": true },
+      { "text": "Las direcciones IP clásicas permiten una ampliación en el campo de direccionamiento de hasta 2 bits", "isCorrect": false },
+      { "text": "Se puede definir un subnetting para 7 subredes operativas", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "T) Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "QAM es un tipo de multiplexación", "isCorrect": true },
+      { "text": "PCM es un tipo de multiplexación", "isCorrect": true },
+      { "text": "Se puede tener un Firewall y un router sobre la misma máquina operando correctamente", "isCorrect": true },
+      { "text": "Diseñar sin escalabilidad no es siempre posible", "isCorrect": true }
+    ]
+  }
+]
