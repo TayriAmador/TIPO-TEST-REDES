@@ -13,6 +13,9 @@
 
   <div id="startScreen" class="card">
     <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
+    <div class="alert-box">
+      Este test puede contener algún error
+    </div>
     <button class="btn-start" onclick="startQuiz()">Empezar Test</button>
   </div>
 
@@ -54,7 +57,7 @@
 
   function startQuiz() {
     if (questions.length === 0) {
-      alert("Cargando preguntas... 😅");
+      alert("Cargando preguntas... ");
       return;
     }
     document.getElementById("startScreen").classList.add("hidden");
@@ -170,7 +173,7 @@
     document.getElementById("scoreTitle").innerText = `Resultado Final: ${score} de ${questions.length}`;
     
     const percentage = Math.round((score / questions.length) * 100);
-    let message = percentage >= 50 ? "¡Buen trabajo! Sigue así. 🚀" : "Necesitas repasar un poco más. ¡No te rindas! 💪";
+    let message = percentage >= 50 ? "¡Buen trabajo! Sigue así." : "Necesitas repasar un poco más. ¡No te rindas! ";
     document.getElementById("scoreSubtitle").innerText = `Has acertado el ${percentage}%. ${message}`;
     
     document.getElementById("summaryContent").innerHTML = summaryHTML;
