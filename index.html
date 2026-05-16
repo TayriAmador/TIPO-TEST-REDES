@@ -195,7 +195,6 @@
     const userSelectedCurrent = userAnswers[current];
     const correctIndices = q.options.map((opt, i) => opt.isCorrect === true ? i : undefined).filter(i => typeof i === "number");
     
-    // Evaluamos el estado general de la respuesta del usuario
     const selectedAnyWrong = userSelectedCurrent.some(i => q.options[i].isCorrect === false);
     const missedAnyCorrect = correctIndices.some(i => userSelectedCurrent.includes(i) === false);
 
@@ -217,18 +216,15 @@
       if (isStudyMode === true) {
         if (isChecked === true) {
           checkbox.disabled = true;
+          label.style.pointerEvents = "none"; // Esto evita el fallo de hover en móviles
           
           if (selectedAnyWrong === true) {
-            // Escenario: Fallo total (marcó alguna incorrecta)
-            // Rojo para las malas marcadas, Verde para todas las buenas (las haya marcado o no)
             if (isSelected === true && isCorrectOption === false) {
               label.classList.add("wrong-selected");
             } else if (isCorrectOption === true) {
               label.classList.add("correct-selected");
             }
           } else {
-            // Escenario: Iba por buen camino (no marcó ninguna mala)
-            // Si le faltan opciones, amarillo para las que le faltaron. Verde para las que sí acertó.
             if (isCorrectOption === true && isSelected === true) {
               label.classList.add("correct-selected");
             } else if (isCorrectOption === true && isSelected === false) {
@@ -255,7 +251,6 @@
       container.appendChild(label);
     });
 
-    // Lógica para mostrar la caja de feedback abajo
     if (isStudyMode === true && isChecked === true && typeof feedbackBox === "object" && Boolean(feedbackBox) === true) {
       feedbackBox.classList.remove("hidden");
       
@@ -273,7 +268,7 @@
         feedbackBox.classList.add("correct-feedback");
         feedbackBox.classList.remove("wrong-feedback");
         feedbackBox.classList.remove("partial-feedback");
-        feedbackBox.innerHTML = "<strong>✅ ¡Respuesta totalmente correcta!</strong>";
+        feedbackBox.innerHTML = "<strong>✅ Respuesta totalmente correcta.</strong>";
       }
     }
 
@@ -356,7 +351,6 @@
          const wasCorrect = correctIndices.includes(optIndex);
          
          if (wasCorrect === true || wasSelected === true) {
-            // Iconos del resumen final (sin exclamaciones lógicas)
             let icon = "❌ (Sobró)";
             if (wasCorrect === true && wasSelected === true) {
                icon = "✅";
