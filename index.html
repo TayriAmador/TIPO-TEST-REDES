@@ -9,38 +9,55 @@
 <body>
 
   <div class="container">
-    <h1>REPASO REDES Y TECNOLOGÍAS DE LA INFORMACION</h1>
+    <h1>REPASO REDES Y TECNOLOGÍAS DE LA INFORMACIÓN</h1>
 
+    <!-- Pantalla de inicio -->
     <div id="startScreen" class="card">
       <div class="alert-box">
         ADVERTENCIA: Este test puede contener algún error
       </div>
       <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
+      
+      <div class="settings-group">
+        <label for="numQuestions">¿Cuántas preguntas deseas realizar?</label>
+        <input type="number" id="numQuestions" min="1" value="10">
+        <small id="maxQuestionsHint" class="text-muted"></small>
+      </div>
+
       <button class="btn-start" onclick="startQuiz()">Empezar Test</button>
     </div>
-  </div>
 
-  <div id="quizBox" class="card hidden">
-    <h2 id="questionText"></h2>
-    <div id="optionsContainer" class="options-grid"></div>
+    <!-- Pantalla del Test -->
+    <div id="quizBox" class="card hidden">
+      <!-- Cabecera del test con botón de volver -->
+      <div class="quiz-header">
+        <button class="btn-back" onclick="goBackToStart()">⬅ Volver</button>
+        <span id="progress"></span>
+      </div>
 
-    <div class="nav-buttons">
-      <button id="prevBtn" class="btn-nav" onclick="prevQuestion()">⬅ Anterior</button>
-      <span id="progress"></span>
-      <button id="nextBtn" class="btn-next" onclick="nextQuestion()">Siguiente ➡</button>
-      <button id="finishBtn" class="btn-finish hidden" onclick="endQuiz()">Finalizar </button>
+      <h2 id="questionText"></h2>
+      <div id="optionsContainer" class="options-grid"></div>
+
+      <div class="nav-buttons">
+        <div class="action-buttons">
+          <button id="prevBtn" class="btn-nav" onclick="prevQuestion()">⬅ Anterior</button>
+          <button id="nextBtn" class="btn-next" onclick="nextQuestion()">Siguiente ➡</button>
+          <button id="finishBtn" class="btn-finish hidden" onclick="endQuiz()">Finalizar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pantalla de Resultados -->
+    <div id="summaryBox" class="card hidden">
+      <h2 id="scoreTitle"></h2>
+      <p id="scoreSubtitle" class="text-muted"></p>
+      <div id="summaryContent" class="summary-list"></div>
+      <button class="btn-start" style="margin-top: 20px;" onclick="location.reload()">Repetir Test</button>
     </div>
   </div>
 
-  <div id="summaryBox" class="card hidden">
-    <h2 id="scoreTitle"></h2>
-    <p id="scoreSubtitle" class="text-muted"></p>
-    <div id="summaryContent" class="summary-list"></div>
-    <button class="btn-start" style="margin-top: 20px;" onclick="location.reload()">Repetir Test</button>
-  </div>
-</div>
-
 <script>
+  let allQuestions = []; 
   let questions = [];
   let current = 0;
   let userAnswers = []; 
@@ -56,11 +73,19 @@
     try {
       const response = await fetch("preguntas.json");
       let data = await response.json();
+      allQuestions = data;
       
-      shuffleArray(data);
-      questions = data;
+      const hint = document.getElementById("maxQuestionsHint");
+      if (typeof hint === "object" && hint !== null) {
+        hint.innerText = `(Máximo disponible: ${allQuestions.length})`;
+      }
+
+      const input = document.getElementById("numQuestions");
+      if (typeof input === "object" && input !== null) {
+        input.max = allQuestions.length;
+        input.value = allQuestions.length; 
+      }
       
-      userAnswers = new Array(questions.length).fill(undefined).map(() => []);
     } catch (error) {
       console.error("Error cargando las preguntas:", error);
       document.getElementById("startScreen").innerHTML = "<p style='color:red'>Error al cargar las preguntas. Asegúrate de estar corriendo esto en un servidor (ej. Live Server o GitHub Pages).</p>";
@@ -68,13 +93,43 @@
   }
 
   function startQuiz() {
-    if (questions.length === 0) {
+    if (allQuestions.length === 0) {
       alert("Cargando preguntas...");
       return;
     }
+
+    let selectedCount = allQuestions.length;
+    const inputElement = document.getElementById("numQuestions");
+    
+    if (typeof inputElement === "object" && inputElement !== null) {
+      const parsedValue = parseInt(inputElement.value, 10);
+      if (typeof parsedValue === "number" && isNaN(parsedValue) === false) {
+        selectedCount = parsedValue;
+      }
+    }
+
+    if (selectedCount > allQuestions.length) {
+      selectedCount = allQuestions.length;
+    }
+    if (selectedCount < 1) {
+      selectedCount = 1;
+    }
+
+    let shuffled = [...allQuestions];
+    shuffleArray(shuffled);
+    
+    questions = shuffled.slice(0, selectedCount);
+    userAnswers = new Array(questions.length).fill(undefined).map(() => []);
+
     document.getElementById("startScreen").classList.add("hidden");
     document.getElementById("quizBox").classList.remove("hidden");
     showQuestion();
+  }
+
+  function goBackToStart() {
+    document.getElementById("quizBox").classList.add("hidden");
+    document.getElementById("startScreen").classList.remove("hidden");
+    current = 0;
   }
 
   function showQuestion() {
@@ -92,17 +147,16 @@
       checkbox.type = "checkbox";
       checkbox.value = index;
       
-      if (userAnswers[current].includes(index)) {
+      if (userAnswers[current].includes(index) === true) {
         checkbox.checked = true;
       }
 
       checkbox.onchange = () => {
-        if (checkbox.checked) {
+        if (checkbox.checked === true) {
           if (userAnswers[current].includes(index) === false) {
             userAnswers[current].push(index);
           }
         } else {
-          // Filtrado usando una evaluación estricta en lugar de !==
           userAnswers[current] = userAnswers[current].filter(i => i === index ? false : true);
         }
       };
@@ -148,19 +202,18 @@
     let summaryHTML = "";
 
     questions.forEach((q, qIndex) => {
-      // Uso de guarda de tipo (typeof) para filtrar los números en lugar de usar != null
-      const correctIndices = q.options.map((opt, i) => opt.isCorrect ? i : null).filter(i => typeof i === "number").sort();
+      const correctIndices = q.options.map((opt, i) => opt.isCorrect === true ? i : undefined).filter(i => typeof i === "number").sort();
       const userSelected = userAnswers[qIndex].slice().sort();
       
       const isRight = JSON.stringify(correctIndices) === JSON.stringify(userSelected);
-      if (isRight) {
+      if (isRight === true) {
          score++;
       }
 
       summaryHTML += `
-        <div class="summary-item ${isRight ? 'correct' : 'wrong'}">
+        <div class="summary-item ${isRight === true ? 'correct' : 'wrong'}">
           <h3>${qIndex + 1}. ${q.question}</h3>
-          <p>Tu resultado: <span class="${isRight ? 'correct-text' : 'wrong-text'}">${isRight ? '✔ Correcto' : '❌ Incorrecto'}</span></p>
+          <p>Tu resultado: <span class="${isRight === true ? 'correct-text' : 'wrong-text'}">${isRight === true ? '✔ Correcto' : '❌ Incorrecto'}</span></p>
       `;
 
       summaryHTML += `<ul>`;
@@ -168,8 +221,8 @@
          const wasSelected = userSelected.includes(optIndex);
          const wasCorrect = correctIndices.includes(optIndex);
          
-         if (wasCorrect || wasSelected) {
-            let icon = wasCorrect && wasSelected ? "✅" : (wasCorrect && wasSelected === false ? "⚠️ (Faltó)" : "❌ (Sobró)");
+         if (wasCorrect === true || wasSelected === true) {
+            let icon = wasCorrect === true && wasSelected === true ? "✅" : (wasCorrect === true && wasSelected === false ? "⚠️ (Faltó)" : "❌ (Sobró)");
             summaryHTML += `<li>${icon} ${opt.text}</li>`;
          }
       });
@@ -188,5 +241,6 @@
 
   loadQuestions();
 </script>
+
 </body>
 </html>
