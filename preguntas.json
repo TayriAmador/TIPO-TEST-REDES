@@ -258,7 +258,7 @@
       },
       {
         "text": " Si cambio el medio de transmisión deberé cambiar de tarjeta de red.",
-        "isCorrect": true
+        "isCorrect": false
       },
       {
         "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red y el operativo de red. ",
