@@ -12,12 +12,10 @@
     <h1>REPASO REDES Y TECNOLOGÍAS DE LA INFORMACION</h1>
 
     <div id="startScreen" class="card">
-      <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
-      
       <div class="alert-box">
-        Este test puede contener algún error
+        ADVERTENCIA: Este test puede contener algún error
       </div>
-      
+      <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
       <button class="btn-start" onclick="startQuiz()">Empezar Test</button>
     </div>
   </div>
@@ -47,11 +45,22 @@
   let current = 0;
   let userAnswers = []; 
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
   async function loadQuestions() {
     try {
       const response = await fetch("preguntas.json");
-      questions = await response.json();
-      userAnswers = new Array(questions.length).fill().map(() => []);
+      let data = await response.json();
+      
+      shuffleArray(data);
+      questions = data;
+      
+      userAnswers = new Array(questions.length).fill(undefined).map(() => []);
     } catch (error) {
       console.error("Error cargando las preguntas:", error);
       document.getElementById("startScreen").innerHTML = "<p style='color:red'>Error al cargar las preguntas. Asegúrate de estar corriendo esto en un servidor (ej. Live Server o GitHub Pages).</p>";
@@ -60,7 +69,7 @@
 
   function startQuiz() {
     if (questions.length === 0) {
-      alert("Cargando preguntas... ");
+      alert("Cargando preguntas...");
       return;
     }
     document.getElementById("startScreen").classList.add("hidden");
@@ -89,11 +98,12 @@
 
       checkbox.onchange = () => {
         if (checkbox.checked) {
-          if (!userAnswers[current].includes(index)) {
+          if (userAnswers[current].includes(index) === false) {
             userAnswers[current].push(index);
           }
         } else {
-          userAnswers[current] = userAnswers[current].filter(i => i !== index);
+          // Filtrado usando una evaluación estricta en lugar de !==
+          userAnswers[current] = userAnswers[current].filter(i => i === index ? false : true);
         }
       };
 
@@ -138,11 +148,14 @@
     let summaryHTML = "";
 
     questions.forEach((q, qIndex) => {
-      const correctIndices = q.options.map((opt, i) => opt.isCorrect ? i : null).filter(i => i !== null).sort();
+      // Uso de guarda de tipo (typeof) para filtrar los números en lugar de usar != null
+      const correctIndices = q.options.map((opt, i) => opt.isCorrect ? i : null).filter(i => typeof i === "number").sort();
       const userSelected = userAnswers[qIndex].slice().sort();
       
       const isRight = JSON.stringify(correctIndices) === JSON.stringify(userSelected);
-      if (isRight) score++;
+      if (isRight) {
+         score++;
+      }
 
       summaryHTML += `
         <div class="summary-item ${isRight ? 'correct' : 'wrong'}">
@@ -156,27 +169,17 @@
          const wasCorrect = correctIndices.includes(optIndex);
          
          if (wasCorrect || wasSelected) {
-            let icon = wasCorrect && wasSelected ? "✅" : (wasCorrect && !wasSelected ? "⚠️ (Faltó)" : "❌ (Sobró)");
+            let icon = wasCorrect && wasSelected ? "✅" : (wasCorrect && wasSelected === false ? "⚠️ (Faltó)" : "❌ (Sobró)");
             summaryHTML += `<li>${icon} ${opt.text}</li>`;
          }
       });
-      summaryHTML += `</ul>`;
-
-      if (!isRight && q.explicacion) {
-        summaryHTML += `
-          <div class="explanation-box">
-            <strong>💡 Por qué fallaste:</strong> ${q.explicacion}
-          </div>
-        `;
-      }
-
-      summaryHTML += `</div>`;
+      summaryHTML += `</ul></div>`;
     });
 
     document.getElementById("scoreTitle").innerText = `Resultado Final: ${score} de ${questions.length}`;
     
     const percentage = Math.round((score / questions.length) * 100);
-    let message = percentage >= 50 ? "¡Buen trabajo! Sigue así." : "Necesitas repasar un poco más. ¡No te rindas! ";
+    let message = percentage >= 50 ? "Buen trabajo. Sigue así." : "Necesitas repasar un poco más. No te rindas.";
     document.getElementById("scoreSubtitle").innerText = `Has acertado el ${percentage}%. ${message}`;
     
     document.getElementById("summaryContent").innerHTML = summaryHTML;
@@ -185,6 +188,5 @@
 
   loadQuestions();
 </script>
-
 </body>
 </html>

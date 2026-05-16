@@ -1,212 +1,1918 @@
 [
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Es posible multiplexar a nivel de transporte utilizando puertos (como en TCP y UDpara que varias aplicaciones usen la red a la vez.",
     "options": [
-      { "text": "ATM es un protocolo exclusivo de nivel 3", "isCorrect": false },
-      { "text": "Es posible multiplexar la comunicación a nivel de transporte", "isCorrect": true },
-      { "text": "El nivel de transporte no controla errores", "isCorrect": false },
-      { "text": "Los niveles 2 y 3 han de estar siempre presentes en una comunicación", "isCorrect": false },
-      { "text": "Una MAN no puede ser parte de una WAN", "isCorrect": false }
+      {
+        "text": "ATM es un protocolo exclusivo de nivel 3",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible multiplexar la comunicación a nivel de transporte",
+        "isCorrect": true
+      },
+      {
+        "text": "El nivel de transporte no controla errores",
+        "isCorrect": false
+      },
+      {
+        "text": "Los niveles 2 y 3 han de estar siempre presentes en una comunicación",
+        "isCorrect": false
+      },
+      {
+        "text": "Una MAN no puede ser parte de una WAN",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "La carga de red depende directamente de cuántos dispositivos estén intentando acceder simultáneamente y del protocolo de acceso al medio (como CSMA/C",
     "options": [
-      { "text": "La carga de una red no depende de la topología de la misma", "isCorrect": false },
-      { "text": "La carga de una red depende del número de nodos activos", "isCorrect": true },
-      { "text": "La carga de una red depende del método de acceso empleado", "isCorrect": true },
-      { "text": "La carga de una red siempre se mejora con un cambio de tecnología de red", "isCorrect": false },
-      { "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU", "isCorrect": false }
+      {
+        "text": "La carga de una red no depende de la topología de la misma",
+        "isCorrect": true
+      },
+      {
+        "text": "La carga de una red depende del número de nodos activos",
+        "isCorrect": false
+      },
+      {
+        "text": "La carga de una red depende del método de acceso empleado",
+        "isCorrect": false
+      },
+      {
+        "text": "La carga de una red siempre se mejora con un cambio de tecnología de red",
+        "isCorrect": false
+      },
+      {
+        "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Con el equipamiento adecuado (como switches que evitan dominios de colisió es perfectamente posible tener concurrencia de transmisiones en redes 802.3 (Etherne",
     "options": [
-      { "text": "No es posible realizar broadcast en redes en anillo", "isCorrect": false },
-      { "text": "Para una red ATM los tiempos de espera medios son altos en condiciones de baja carga", "isCorrect": false },
-      { "text": "No es posible obtener concurrencia en redes tipo Fast Ethernet", "isCorrect": false },
-      { "text": "Es posible obtener concurrencia en una red de tipo 802.3", "isCorrect": true },
-      { "text": "Todas las redes disponen de nivel de distribución", "isCorrect": false }
+      {
+        "text": "No es posible realizar broadcast en redes en anillo",
+        "isCorrect": false
+      },
+      {
+        "text": "Para una red ATM los tiempos de espera medios son altos en condiciones de baja carga",
+        "isCorrect": false
+      },
+      {
+        "text": "No es posible obtener concurrencia en redes tipo Fast Ethernet",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible obtener concurrencia en una red de tipo 802.3",
+        "isCorrect": true
+      },
+      {
+        "text": "Todas las redes disponen de nivel de distribución",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Las redes de cable tradicionales han evolucionado a arquitecturas HFC (Híbrido de Fibra y Coaxiapara mejorar el ancho de banda y la distancia.",
     "options": [
-      { "text": "Las redes troncales que dan servicios de cable utilizan combinaciones de fibra y coaxial", "isCorrect": true },
-      { "text": "La dimensión de una red que utilice CSMA/CD es independiente del tiempo de propagación", "isCorrect": false },
-      { "text": "Un dispositivo hotswap significa que soporta altas temperaturas", "isCorrect": false },
-      { "text": "Un acceso básico RDSI incluye un canal E2", "isCorrect": false },
-      { "text": "Un router trabaja más rápido que un bridge", "isCorrect": false }
+      {
+        "text": "Las redes troncales que dan servicios de cable utilizan combinaciones de fibra y coaxial",
+        "isCorrect": true
+      },
+      {
+        "text": "La dimensión de una red que utilice CSMA/CD es independiente del tiempo de propagación",
+        "isCorrect": false
+      },
+      {
+        "text": "Un dispositivo hotswap significa que soporta altas temperaturas",
+        "isCorrect": false
+      },
+      {
+        "text": "Un acceso básico RDSI incluye un canal E2",
+        "isCorrect": false
+      },
+      {
+        "text": "Un router trabaja más rápido que un bridge",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "En un modelo de datagramas, los paquetes viajan de forma independiente, por lo que frecuentemente se utilizan números de secuencia (generalmente añadidos por capas superiores como TCpara reordenarlos en el destino.",
     "options": [
-      { "text": "Los circuitos virtuales utilizan una vía de transmisión dedicada", "isCorrect": false },
-      { "text": "En la conmutación de paquetes los nodos siempre realizan conversión de velocidad", "isCorrect": false },
-      { "text": "Se utilizan números de secuencia en el modelo de datagrama", "isCorrect": true },
-      { "text": "El costo en la conmutación de paquetes siempre será función del tiempo de conexión", "isCorrect": false },
-      { "text": "Un bridge trabaja más rápido que un router", "isCorrect": false }
+      {
+        "text": "Los circuitos virtuales utilizan una vía de transmisión dedicada",
+        "isCorrect": false
+      },
+      {
+        "text": "En la conmutación de paquetes los nodos siempre realizan conversión de velocidad",
+        "isCorrect": false
+      },
+      {
+        "text": "Se utilizan números de secuencia en el modelo de datagrama",
+        "isCorrect": true
+      },
+      {
+        "text": "El costo en la conmutación de paquetes siempre será función del tiempo de conexión",
+        "isCorrect": false
+      },
+      {
+        "text": "Un bridge trabaja más rápido que un router",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "El tamaño mínimo en Ethernet (64 bytees vital por convenio para el correcto funcionamiento de la detección de colisiones, y Ethernet (802.admite topologías físicas en estrella gracias a los concentradores/switches.",
     "options": [
-      { "text": "Las redes ATM tienen una limitación de distancia debido al protocolo que utilizan", "isCorrect": true },
-      { "text": "El término Attachment Unit Interface nunca se asocia a redes tipo Ethernet", "isCorrect": false },
-      { "text": "El tamaño mínimo de paquete en redes Ethernet se adoptó por convenio", "isCorrect": true },
-      { "text": "Las redes tipo 802.3 permiten topología en estrella", "isCorrect": true },
-      { "text": "Si cambio de método de acceso aumentará la velocidad de transmisión", "isCorrect": false }
+      {
+        "text": "Las redes ATM tienen una limitación de distancia debido al protocolo que utilizan",
+        "isCorrect": false
+      },
+      {
+        "text": "El término Attachment Unit Interface nunca se asocia a redes tipo Ethernet",
+        "isCorrect": false
+      },
+      {
+        "text": "El tamaño mínimo de paquete en redes Ethernet se adoptó por convenio",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes tipo 802.3 permiten topología en estrella",
+        "isCorrect": true
+      },
+      {
+        "text": "Si cambio de método de acceso aumentará la velocidad de transmisión",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Frame Relay puede escalar y ofrecer enlaces con velocidades superiores a los 2 Mbps E1 estándar. Además, es completamente posible encapsular ATM sobre jerarquías SDH.",
     "options": [
-      { "text": "Frame Relay no permite enlaces por debajo de 2 Mbps", "isCorrect": false },
-      { "text": "Frame Relay permite enlaces por encima de 2 Mbps", "isCorrect": true },
-      { "text": "No se puede encapsular ATM sobre SDH", "isCorrect": false },
-      { "text": "Una MAN es siempre evolución de una LAN", "isCorrect": false },
-      { "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red y el operativo de red", "isCorrect": false }
+      {
+        "text": "Frame Relay no permite enlaces por debajo de 2 Mbps",
+        "isCorrect": false
+      },
+      {
+        "text": "Frame Relay permite enlaces por encima de 2 Mbps",
+        "isCorrect": true
+      },
+      {
+        "text": "No se puede encapsular ATM sobre SDH",
+        "isCorrect": false
+      },
+      {
+        "text": "Una MAN es siempre evolución de una LAN",
+        "isCorrect": false
+      },
+      {
+        "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red y el operativo de red",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "TCP/IP es agnóstico al medio físico subyacente y puede operar sobre líneas serie (ej. Point-to-Point Protoco Si un router une 3 redes, necesita 3 IPs lógicas distintas, una por cada interfaz física.",
     "options": [
-      { "text": "Es posible utilizar TCP/IP sobre líneas seriales", "isCorrect": true },
-      { "text": "No es posible utilizar TCP/IP en comunicaciones por satélite", "isCorrect": false },
-      { "text": "Un dispositivo de internetworking que tenga N direcciones físicas debe tener N direcciones lógicas", "isCorrect": true },
-      { "text": "Las direcciones lógicas de una red dependen de las direcciones físicas", "isCorrect": false },
-      { "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red", "isCorrect": false }
+      {
+        "text": "Es posible utilizar TCP/IP sobre líneas seriales",
+        "isCorrect": true
+      },
+      {
+        "text": "No es posible utilizar TCP/IP en comunicaciones por satélite",
+        "isCorrect": false
+      },
+      {
+        "text": "Un dispositivo de internetworking que tenga N direcciones físicas debe tener N direcciones lógicas",
+        "isCorrect": false
+      },
+      {
+        "text": "Las direcciones lógicas de una red dependen de las direcciones físicas",
+        "isCorrect": false
+      },
+      {
+        "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "La tecnología ATM se diseñó con celdas de tamaño fijo precisamente para garantizar Calidad de Servicio (Qoy transportar voz y video. Un router clásico puede enrutar múltiples protocolos simultáneamente (IP, IPX, etc",
     "options": [
-      { "text": "Los datos transmitidos sobre redes Gigabit Ethernet son más rápidas que las ATM", "isCorrect": false },
-      { "text": "Las redes ATM pueden transmitir video con QoS", "isCorrect": true },
-      { "text": "RDSI utiliza conmutación de paquetes con circuito virtual permanente", "isCorrect": true },
-      { "text": "RDSI utiliza conmutación de paquetes con circuito virtual conmutado", "isCorrect": false },
-      { "text": "Un mismo router soporta hasta 3 diferentes protocolos de red", "isCorrect": true }
+      {
+        "text": "Los datos transmitidos sobre redes Gigabit Ethernet son más rápidas que las ATM",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes ATM pueden transmitir video con QoS",
+        "isCorrect": true
+      },
+      {
+        "text": "RDSI utiliza conmutación de paquetes con circuito virtual permanente",
+        "isCorrect": false
+      },
+      {
+        "text": "RDSI utiliza conmutación de paquetes con circuito virtual conmutado",
+        "isCorrect": false
+      },
+      {
+        "text": "Un mismo router soporta hasta 3 diferentes protocolos de red",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Insertar un repetidor amplía la distancia pero también extiende el dominio de colisión en redes compartidas. Además, el overhead de protocolos hace que los tiempos de transmisión no sean matemáticamente proporcionales solo al tamaño del archivo.",
     "options": [
-      { "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps", "isCorrect": false },
-      { "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps", "isCorrect": true },
-      { "text": "La velocidad en baudios nunca podrá ser 1/3 de la velocidad de transmisión serie", "isCorrect": false },
-      { "text": "No se puede emplear cable coaxial para transmitir en banda base", "isCorrect": true },
-      { "text": "A nivel de nivel de mejorar la carga siempre es interesante insertar un repetidor en una red", "isCorrect": true }
+      {
+        "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps",
+        "isCorrect": false
+      },
+      {
+        "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps",
+        "isCorrect": true
+      },
+      {
+        "text": "La velocidad en baudios nunca podrá ser 1/3 de la velocidad de transmisión serie",
+        "isCorrect": false
+      },
+      {
+        "text": "No se puede emplear cable coaxial para transmitir en banda base",
+        "isCorrect": false
+      },
+      {
+        "text": "A nivel de nivel de mejorar la carga siempre es interesante insertar un repetidor en una red",
+        "isCorrect": false
+      }
+    ]
+  },
+    {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Un mismo router soporta hasta 3 diferentes protocolos de red",
+        "isCorrect": false
+      },
+      {
+        "text": " Si cambio el medio de transmisión deberé cambiar de tarjeta de red.",
+        "isCorrect": true
+      },
+      {
+        "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red y el operativo de red. ",
+        "isCorrect": false
+      },
+      {
+        "text": "Si cambio de método de acceso aumentará la velocidad de transmisión",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "El MTU marca un límite de tamaño por paquete que impacta en la fragmentación de los protocolos superiores. A nivel de infraestructura, una MAN tiene entidad propia y puede considerarse un eslabón aislado antes de ser parte de una WAN.",
     "options": [
-      { "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU", "isCorrect": true },
-      { "text": "Una MAN no puede ser parte de una WAN", "isCorrect": true },
-      { "text": "Todas las redes disponen de nivel de distribución", "isCorrect": false },
-      { "text": "IP es un protocolo de nivel 4", "isCorrect": false }
+      {
+        "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU",
+        "isCorrect": false
+      },
+      {
+        "text": "Una MAN no puede ser parte de una WAN",
+        "isCorrect": false
+      },
+      {
+        "text": "Todas las redes disponen de nivel de distribución",
+        "isCorrect": false
+      },
+      {
+        "text": "IP es un protocolo de nivel 4",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Bajo ciertas métricas de diseño antiguo, se afirmaba que ciertos procesamientos de router superaban a los de bridges o al revés. Esta es teórica, pero ten en cuenta la respuesta del test.",
     "options": [
-      { "text": "Un router trabaja más rápido que un bridge", "isCorrect": true },
-      { "text": "Un bridge trabaja más rápido que un router", "isCorrect": false },
-      { "text": "A nivel de mejorar la carga siempre es interesante insertar un repetidor en una red", "isCorrect": true },
-      { "text": "Un Protocol Soopf es una solución más eficiente que un Gateway", "isCorrect": false }
+      {
+        "text": "Un router trabaja más rápido que un bridge",
+        "isCorrect": false
+      },
+      {
+        "text": "Un bridge trabaja más rápido que un router",
+        "isCorrect": false
+      },
+      {
+        "text": "A nivel de mejorar la carga siempre es interesante insertar un repetidor en una red",
+        "isCorrect": false
+      },
+      {
+        "text": "Un Protocol Soopf es una solución más eficiente que un Gateway",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Al igual que la pregunta J, el tiempo de transmisión no obedece a una simple regla de tres directa; intervienen latencias, encapsulamiento y tiempos de procesamiento.",
     "options": [
-      { "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps", "isCorrect": false },
-      { "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps", "isCorrect": true },
-      { "text": "La velocidad en baudios nunca podrá ser 1/3 de la velocidad de transmisión serie", "isCorrect": false },
-      { "text": "No se puede emplear cable coaxial para transmitir en banda base", "isCorrect": true }
+      {
+        "text": "Una red a 1000Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps",
+        "isCorrect": false
+      },
+      {
+        "text": "No se tarda lo mismo en transmitir un fichero de 1Kbyte por una línea de 128Kbps que enviar uno de 500 bits por una de 64Kbps",
+        "isCorrect": true
+      },
+      {
+        "text": "La velocidad en baudios nunca podrá ser 1/3 de la velocidad de transmisión serie",
+        "isCorrect": false
+      },
+      {
+        "text": "No se puede emplear cable coaxial para transmitir en banda base",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Una regla de oro en TCP/IP es que no puede haber direcciones IP duplicadas operando a la vez o causará conflictos. DHCP se encarga precisamente de gestionar ese pool para evitar colisiones lógicas.",
     "options": [
-      { "text": "Las redes de cable no están estandarizadas", "isCorrect": false },
-      { "text": "Dos sistemas en una misma red no pueden tener IP iguales", "isCorrect": true },
-      { "text": "En una red con DHCP no puede ocurrir que 2 máquinas tengan el mismo IP", "isCorrect": true },
-      { "text": "ICMP permite realizar redirección de protocolo de sesión", "isCorrect": true }
+      {
+        "text": "Las redes de cable no están estandarizadas",
+        "isCorrect": false
+      },
+      {
+        "text": "Dos sistemas en una misma red no pueden tener IP iguales",
+        "isCorrect": false
+      },
+      {
+        "text": "En una red con DHCP no puede ocurrir que 2 máquinas tengan el mismo IP",
+        "isCorrect": false
+      },
+      {
+        "text": "ICMP permite realizar redirección de protocolo de sesión",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "En Ethernet con CSMA/CD, más nodos significa mayor probabilidad de colisión y, por tanto, más retardo. Si tienes estaciones sin disco (que inician por re necesitan acceso sin filtros severos a su servidor.",
     "options": [
-      { "text": "En una red ethernet el retardo de la señal es proporcional al número de nodos activos", "isCorrect": true },
-      { "text": "Es posible aplicar subnetting a una red TCP/IP sin emplear máscara de red", "isCorrect": false },
-      { "text": "No es posible conectar un servidor de ficheros al lado de un bridge si del otro extremo cuelgan estaciones sin disco", "isCorrect": true },
-      { "text": "No es posible conectar 2 routers en configuración redundante", "isCorrect": false }
+      {
+        "text": "En una red ethernet el retardo de la señal es proporcional al número de nodos activos",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible aplicar subnetting a una red TCP/IP sin emplear máscara de red",
+        "isCorrect": false
+      },
+      {
+        "text": "No es posible conectar un servidor de ficheros al lado de un bridge si del otro extremo cuelgan estaciones sin disco",
+        "isCorrect": false
+      },
+      {
+        "text": "No es posible conectar 2 routers en configuración redundante",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "En este caso, tu test marcaba todas como falsas. Un Proxy, un Firewall y NAT son conceptos diferentes que a menudo conviven en el mismo aparato, pero no son lo mismo semánticamente.",
     "options": [
-      { "text": "Un Firewall es un tipo de Proxy", "isCorrect": false },
-      { "text": "Un Proxy es un tipo de Firewall", "isCorrect": false },
-      { "text": "Un NAT es una funcionalidad poco adecuada para un sistema Firewall", "isCorrect": false },
-      { "text": "Un Proxy-Firewall es un tipo de NAT", "isCorrect": false }
+      {
+        "text": "Un Firewall es un tipo de Proxy",
+        "isCorrect": false
+      },
+      {
+        "text": "Un Proxy es un tipo de Firewall",
+        "isCorrect": true
+      },
+      {
+        "text": "Un NAT es una funcionalidad poco adecuada para un sistema Firewall",
+        "isCorrect": false
+      },
+      {
+        "text": "Un Proxy-Firewall es un tipo de NAT",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Un servidor puede correr múltiples servicios a la vez (DNS en puerto 53, DHCP en puertos 67/6siempre que no colisionen en sus puertos de escucha.",
     "options": [
-      { "text": "RDSI es un protocolo derivado de TCPIP", "isCorrect": false },
-      { "text": "El protocolo ICMP es de nivel 4", "isCorrect": false },
-      { "text": "El servicio DHCP puede ejecutarse sobre una máquina con DNS", "isCorrect": true },
-      { "text": "El servicio FTP utiliza el puerto 1023 para transferencia de datos", "isCorrect": false }
+      {
+        "text": "RDSI es un protocolo derivado de TCPIP",
+        "isCorrect": false
+      },
+      {
+        "text": "El protocolo ICMP es de nivel 4",
+        "isCorrect": false
+      },
+      {
+        "text": "El servicio DHCP puede ejecutarse sobre una máquina con DNS",
+        "isCorrect": true
+      },
+      {
+        "text": "El servicio FTP utiliza el puerto 1023 para transferencia de datos",
+        "isCorrect": false
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Existen configuraciones específicas (ej. interfaces IP unnumberedonde una interfaz de un router delega su dirección, no poseyendo una propia configurada tradicionalmente.",
     "options": [
-      { "text": "No se puede encapsular IP sobre X.25", "isCorrect": false },
-      { "text": "No se puede encapsular Ethernet sobre ATM", "isCorrect": false },
-      { "text": "Un router puede que no tenga direcciones lógicas", "isCorrect": true },
-      { "text": "Un router puede que no tenga direcciones físicas", "isCorrect": true }
+      {
+        "text": "No se puede encapsular IP sobre X.25",
+        "isCorrect": false
+      },
+      {
+        "text": "No se puede encapsular Ethernet sobre ATM",
+        "isCorrect": false
+      },
+      {
+        "text": "Un router puede que no tenga direcciones lógicas",
+        "isCorrect": true
+      },
+      {
+        "text": "Un router puede que no tenga direcciones físicas",
+        "isCorrect": true
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Los hubs gestionables requieren una IP para su interfaz de administración. Mediante VLSM o subnetting clásico es posible crear topologías con 7 subredes (usando los bits adecuado",
     "options": [
-      { "text": "Un ADM es un dispositivo de asociado a tecnologías Ethernet", "isCorrect": false },
-      { "text": "Un HUB dispone de dirección IP para gestionarlo", "isCorrect": true },
-      { "text": "Las direcciones IP clásicas permiten una ampliación en el campo de direccionamiento de hasta 2 bits", "isCorrect": false },
-      { "text": "Se puede definir un subnetting para 7 subredes operativas", "isCorrect": true }
+      {
+        "text": "Un ADM es un dispositivo de asociado a tecnologías Ethernet",
+        "isCorrect": false
+      },
+      {
+        "text": "Un HUB dispone de dirección IP para gestionarlo",
+        "isCorrect": false
+      },
+      {
+        "text": "Las direcciones IP clásicas permiten una ampliación en el campo de direccionamiento de hasta 2 bits",
+        "isCorrect": false
+      },
+      {
+        "text": "Se puede definir un subnetting para 7 subredes operativas",
+        "isCorrect": true
+      }
     ]
   },
   {
     "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
-    "explicacion": "Tanto QAM (Modulación de Amplitud en Cuadraturcomo PCM (Modulación por Impulsos Codificadoson técnicas de modulación. Y sí, es un estándar en la industria montar un enrutador y un cortafuegos en un mismo appliance.",
     "options": [
-      { "text": "QAM es un tipo de multiplexación", "isCorrect": true },
-      { "text": "PCM es un tipo de multiplexación", "isCorrect": true },
-      { "text": "Se puede tener un Firewall y un router sobre la misma máquina operando correctamente", "isCorrect": true },
-      { "text": "Diseñar sin escalabilidad no es siempre posible", "isCorrect": true }
+      {
+        "text": "QAM es un tipo de multiplexación",
+        "isCorrect": false
+      },
+      {
+        "text": "PCM es un tipo de multiplexación",
+        "isCorrect": false
+      },
+      {
+        "text": "Se puede tener un Firewall y un router sobre la misma máquina operando correctamente",
+        "isCorrect": true
+      },
+      {
+        "text": "Diseñar sin escalabilidad no es siempre posible",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "ATM es un protocolo de nivel 4",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible multiplexar la comunicación a nivel de transporte",
+        "isCorrect": true
+      },
+      {
+        "text": "El nivel de transporte controla errores",
+        "isCorrect": true
+      },
+      {
+        "text": "Los niveles 2 y 3 han de estar siempre presentes en una comunicación",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "La carga de una red depende de la topología de la misma",
+        "isCorrect": false
+      },
+      {
+        "text": "La carga de una red depende del número de nodos activos",
+        "isCorrect": false
+      },
+      {
+        "text": "La carga de una red depende del método de acceso empleado",
+        "isCorrect": false
+      },
+      {
+        "text": "La carga de una red puede mejorar con un cambio de tecnología de red",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Es posible realizar broadcast en redes en anillo",
+        "isCorrect": true
+      },
+      {
+        "text": "Para una red ATM los tiempos de espera medios son altos en condiciones de baja carga",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible obtener concurrencia en redes tipo Fast Ethernet",
+        "isCorrect": true
+      },
+      {
+        "text": "Es posible obtener concurrencia en una red de tipo 802.3",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Las redes troncales que dan servicios ADSL deben utilizar una combinación de fibra y coaxial",
+        "isCorrect": false
+      },
+      {
+        "text": "La dimensión de una red que utilice CSMA/CD es independiente del tiempo de propagación",
+        "isCorrect": false
+      },
+      {
+        "text": "Un dispositivo hotswap significa que soporta altas temperaturas",
+        "isCorrect": false
+      },
+      {
+        "text": "Un acceso básico RDSI incluye un canal E2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Los circuitos virtuales utilizan una vía de transmisión dedicada",
+        "isCorrect": false
+      },
+      {
+        "text": "En la conmutación de paquetes los nodos pueden realizar conversión de velocidad",
+        "isCorrect": true
+      },
+      {
+        "text": "Se utilizan números de secuencia en el modelo de datagrama",
+        "isCorrect": true
+      },
+      {
+        "text": "El costo en la conmutación de paquetes puede ser función del tiempo de conexión",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Las redes ATM tienen una limitación de distancia debido al protocolo que utilizan",
+        "isCorrect": false
+      },
+      {
+        "text": "El término Attachment Unit Interface nunca se asocia a redes tipo Ethernet",
+        "isCorrect": false
+      },
+      {
+        "text": "El tamaño mínimo de paquete en redes Ethernet se adoptó por convenio",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes tipo 802.3 no permiten topología en estrella",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Frame Relay permite enlaces por debajo de 2 Mbps",
+        "isCorrect": true
+      },
+      {
+        "text": "Frame Relay permite enlaces por encima de 2 Mbps",
+        "isCorrect": true
+      },
+      {
+        "text": "Se puede encapsular ATM sobre SDH",
+        "isCorrect": true
+      },
+      {
+        "text": "Geant es una red de ámbito internacional",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Es posible utilizar TCP/IP sobre líneas seriales",
+        "isCorrect": true
+      },
+      {
+        "text": "Es posible utilizar TCP/IP en comunicaciones por satélite",
+        "isCorrect": true
+      },
+      {
+        "text": "Un dispositivo de internetworking que tenga N direcciones físicas debe tener N direcciones lógicas",
+        "isCorrect": false
+      },
+      {
+        "text": "Las direcciones lógicas de una red NO dependen de las direcciones físicas",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Los datos transmitidos sobre redes Gigabit Ethernet son más rápidas que las ATM",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes ATM pueden transmitir video con QoS",
+        "isCorrect": true
+      },
+      {
+        "text": "RDSI utiliza conmutación de paquetes con circuito virtual permanente",
+        "isCorrect": false
+      },
+      {
+        "text": "RDSI utiliza conmutación de paquetes con circuito virtual conmutado",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Un mismo router puede soportar diferentes protocolos de red",
+        "isCorrect": true
+      },
+      {
+        "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red",
+        "isCorrect": false
+      },
+      {
+        "text": "Si cambio el medio de transmisión deberé cambiar de tarjeta de red y el operativo de red",
+        "isCorrect": false
+      },
+      {
+        "text": "Si cambio de método de acceso deberé cambiar de tarjeta de red",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "El empleo de los diferentes protocolos de comunicaciones está limitado por el valor de MTU",
+        "isCorrect": false
+      },
+      {
+        "text": "Un backbone puede formar una WAN",
+        "isCorrect": true
+      },
+      {
+        "text": "Hay redes que no disponen de troncal de comunicaciones",
+        "isCorrect": true
+      },
+      {
+        "text": "IP es un protocolo de nivel 4",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Un router puede trabajar más rápido que un bridge",
+        "isCorrect": true
+      },
+      {
+        "text": "Un bridge puede trabajar más rápido que un router",
+        "isCorrect": true
+      },
+      {
+        "text": "Siempre es interesante insertar un repetidor en una red",
+        "isCorrect": false
+      },
+      {
+        "text": "Un Protocol Soopf es más eficiente que un Gateway",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Una red a 1000Mbps siempre será mejor que una de 100Mbps",
+        "isCorrect": false
+      },
+      {
+        "text": "No se tarda lo mismo en transmitir diferentes tamaños/velocidades",
+        "isCorrect": true
+      },
+      {
+        "text": "La velocidad en baudios nunca podrá ser 1/3 de la transmisión",
+        "isCorrect": false
+      },
+      {
+        "text": "No se puede usar coaxial en banda base",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Las redes de cable pueden utilizar cobre y fibra",
+        "isCorrect": true
+      },
+      {
+        "text": "Dos máquinas en una misma red pueden tener IP iguales. ",
+        "isCorrect": true
+      },
+      {
+        "text": "En una red con DHCP puede ocurrir que 3 máquinas tengan el mismo IP. ",
+        "isCorrect": true
+      },
+      {
+        "text": "ICMP permite realizar redirección de protocolo de sesión. ",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "En un anillo estándar el retardo de la señal es proporcional al número de nodos activos.",
+        "isCorrect": true
+      },
+      {
+        "text": ". Es posible aplicar subnetting a una red TCP/IP sin emplear máscara de red.",
+        "isCorrect": false
+      },
+      {
+        "text": " Es posible conectar un servidor de ficheros al lado de un bridge si del otro extremo cuelgan estaciones sin disco",
+        "isCorrect": true
+      },
+      {
+        "text": "No es posible conectar 2 routers en configuración redundante.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Un Firewall es un tipo de Proxy",
+        "isCorrect": false
+      },
+      {
+        "text": "Un Proxy es un tipo de Firewall",
+        "isCorrect": true
+      },
+      {
+        "text": "Un NAT es una funcionalidad que puede presentar un Firewall.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un Proxy-Firewall es un tipo de NAT",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "RDSI es un protocolo derivado de TCPIP.",
+        "isCorrect": false
+      },
+      {
+        "text": "El protocolo ICMP es de nivel 4.",
+        "isCorrect": false
+      },
+      {
+        "text": "El servicio DHCP puede ejecutarse sobre una máquina con DNS",
+        "isCorrect": true
+      },
+      {
+        "text": "El servicio FTP utiliza el puerto 1023 para transferencia de datos",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Se puede encapsular IP sobre X.25",
+        "isCorrect": true
+      },
+      {
+        "text": "Se puede encapsular Ethernet sobre ATM",
+        "isCorrect": true
+      },
+      {
+        "text": "Un router puede que no tenga direcciones lógicas.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un router puede que no tenga direcciones físicas.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Un SWITCH es un dispositivo de asociado a tecnologías Ethernet.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un HUB puede disponer de dirección IP para gestionarlo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Las direcciones IP clásicas permiten una ampliación en el campo de direccionamiento de hasta 2 bits.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se puede definir un subnetting para 7 subredes operativas.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "QAM es un tipo de multiplexación",
+        "isCorrect": false
+      },
+      {
+        "text": "PCM es un tipo de multiplexación",
+        "isCorrect": false
+      },
+      {
+        "text": "Se puede tener un Firewall y un router sobre la misma máquina operando correctamente",
+        "isCorrect": true
+      },
+      {
+        "text": "Diseñar sin escalabilidad no es siempre posible.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Los circuitos virtuales no utilizan siempre una vía de transmisión dedicada.",
+        "isCorrect": true
+      },
+      {
+        "text": "En la conmutación de paquetes los nodos a veces realizan conversión de velocidad.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se utilizan números de secuencia en el modelo de datagrama.",
+        "isCorrect": true
+      },
+      {
+        "text": "El costo en la conmutación se mide en función del tiempo de conexión.",
+        "isCorrect": false
+      },
+      {
+        "text": "El costo en la conmutación se mide en función del tráfico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Seguridad e interoperabilidad en redes están relacionadas de forma inversa.",
+        "isCorrect": false
+      },
+      {
+        "text": "Son ciertas todas las anteriores.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Las redes ATM tienen una limitación de 1000 Km. de distancia debido al protocolo que utilizan.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes SDH tienen una limitación de 200 km. de distancia debido al protocolo que utilizan.",
+        "isCorrect": false
+      },
+      {
+        "text": "El tamaño mínimo de paquete en redes ATM es de 48 bytes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes tipo 802.3 permiten topología en estrella.",
+        "isCorrect": true
+      },
+      {
+        "text": "Una red a 155 Mbps conseguirá siempre mejores prestaciones que otra a 100Mbps.",
+        "isCorrect": false
+      },
+      {
+        "text": "Se tarda lo mismo en transmitir un fichero de 1Kbyte...",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes de SONET también se definen para cobre.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Las transmisiones sobre redes FDDI son más rápidas que en las redes ATM.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes ATM no pueden transmitir video con QoS.",
+        "isCorrect": false
+      },
+      {
+        "text": "JDS utiliza conmutación de paquetes con circuito virtual permanente.",
+        "isCorrect": false
+      },
+      {
+        "text": "SONET utiliza conmutación de paquetes con circuito virtual conmutado.",
+        "isCorrect": false
+      },
+      {
+        "text": "QAM es un tipo de modulación.",
+        "isCorrect": true
+      },
+      {
+        "text": "PCM es un tipo de modulación.",
+        "isCorrect": true
+      },
+      {
+        "text": "MCM es un tipo de modulación.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Es posible utilizar TCP/IP sobre ATM.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es posible utilizar TCP/IP en comunicaciones 802.11.",
+        "isCorrect": true
+      },
+      {
+        "text": "Un dispositivo de internetworking que tenga N direcciones físicas debe tener N direcciones lógicas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las direcciones MAC de una red dependen de las direcciones físicas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las direcciones MAC de una red dependen de las direcciones lógicas.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sólo son ciertas la 4 y la 5.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sólo es cierta la 6.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Los LAN switch son más rápidos que los conmutadores ATM.",
+        "isCorrect": false
+      },
+      {
+        "text": "RDSI/Banda Estrecha utiliza conmutación de paquetes con circuito virtual permanente.",
+        "isCorrect": false
+      },
+      {
+        "text": "ADSL utiliza conmutación de circuito virtual conmutado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un mismo router puede soportar hasta 2 protocolos de red.",
+        "isCorrect": false
+      },
+      {
+        "text": "Las redes ATM permiten topología en estrella.",
+        "isCorrect": true
+      },
+      {
+        "text": "Las redes Gigabit Ethernet pueden transmitir video multicast.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sólo es cierta la número 2.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Un Proxy NAT es un tipo de Firewall de filtrado de Paquetes.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un NAT es una funcionalidad poco adecuada para un sistema Firewall.",
+        "isCorrect": false
+      },
+      {
+        "text": "No todas las redes disponen de nivel de core.",
+        "isCorrect": true
+      },
+      {
+        "text": "No todas las redes disponen de nivel de sesión.",
+        "isCorrect": true
+      },
+      {
+        "text": "La carga de una red no depende del método de acceso empleado.",
+        "isCorrect": true
+      },
+      {
+        "text": "Se debe diseñar antes con escalabilidad que con fiabilidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "Son ciertas la 5 y la 6.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Frame Relay incorpora hasta 4 canales de 64 Kbps.",
+        "isCorrect": false
+      },
+      {
+        "text": "Frame Relay es un protocolo exclusivo de nivel 3 y 4.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible multiplexar la comunicación a nivel de sesión.",
+        "isCorrect": true
+      },
+      {
+        "text": "El nivel de sesión, junto con el de aplicación, controlan errores.",
+        "isCorrect": false
+      },
+      {
+        "text": "El nivel 4 ha de estar siempre presente en una comunicación IP.",
+        "isCorrect": false
+      },
+      {
+        "text": "El nivel 4 no ha de estar siempre presente en una comunicación.",
+        "isCorrect": true
+      },
+      {
+        "text": "La velocidad en baudios nunca podrá ser 1/4 de la velocidad de transmisión serie.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "El overhead de una red depende del protocolo de acceso al medio empleado.",
+        "isCorrect": false
+      },
+      {
+        "text": "La carga de una red y el overhead están relacionados de forma inversa.",
+        "isCorrect": false
+      },
+      {
+        "text": "IP v4 es un protocolo con QoS.",
+        "isCorrect": false
+      },
+      {
+        "text": "El nivel de transporte está limitado por la longitud del datagrama.",
+        "isCorrect": false
+      },
+      {
+        "text": "El empleo de los diferentes protocolos de red está limitado por el valor de MTU.",
+        "isCorrect": false
+      },
+      {
+        "text": "La transferencia entre ordenadores de una red no depende de la topología física de la misma.",
+        "isCorrect": true
+      },
+      {
+        "text": "La carga de una red es directamente proporcional al número de nodos activos.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "Es posible realizar broadcast en redes 802.4.",
+        "isCorrect": true
+      },
+      {
+        "text": "Todas las redes disponen de nivel de distribución y core.",
+        "isCorrect": false
+      },
+      {
+        "text": "No se puede emplear fibra óptica para transmitir en banda base.",
+        "isCorrect": false
+      },
+      {
+        "text": "Para una red SDH los tiempos de espera medios son bajos en condiciones de baja carga.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es posible obtener concurrencia en redes tipo JDS.",
+        "isCorrect": true
+      },
+      {
+        "text": "Es posible obtener concurrencia en una red 802.3.",
+        "isCorrect": true
+      },
+      {
+        "text": "Las redes que disponen de nivel de sesión son más seguras.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      {
+        "text": "La telefonía IP no siempre es rentable para la organización que la incorpore.",
+        "isCorrect": true
+      },
+      {
+        "text": "El diseño de las redes de telecomunicaciones es jerárquico.",
+        "isCorrect": false
+      },
+      {
+        "text": "El diseño de las redes de voz es jerárquico.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un b-router trabaja más rápido que un router.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un bridge trabaja más rápido que un switch de nivel 3.",
+        "isCorrect": false
+      },
+      {
+        "text": "Un bridge trabaja de forma más eficiente que un router.",
+        "isCorrect": false
+      },
+      {
+        "text": "Es posible combinar telefonía IP con voz convencional dentro de una misma corporación.",
+        "isCorrect": true
+      }
+    ]
+  },
+
+
+  
+  
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Es posible obtener concurrencia en redes Ethernet de 1000 Mpbs.", "isCorrect": true },
+      { "text": "VoIP es el conjunto de normas, dispositivos, protocolos, en definitiva la tecnología que permite comunicar voz sobre el protocolo IP.", "isCorrect": true },
+      { "text": "Telefonía sobre IP puede integrarse con telefonía convencional.", "isCorrect": true },
+      { "text": "La voz ha de codificarse para poder ser transmitida por la red IP. Para ello se emplean códecs que garanticen la codificación y compresión del audio para su posterior decodificación.", "isCorrect": true },
+      { "text": "IEEE 802.1Q se utiliza en VLANs.", "isCorrect": true },
+      { "text": "Sólo las 2 primeras son ciertas.", "isCorrect": false },
+      { "text": "Sólo la primera es cierta.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "La dimensión de una red que utilice CSMA/CD es dependiente del tiempo de propagación.", "isCorrect": true },
+      { "text": "Un acceso primario RDSI incluye un canal E3 y E4.", "isCorrect": false },
+      { "text": "Un acceso básico RDSI incluye un canal E1.", "isCorrect": false },
+      { "text": "Un acceso primario RDSI equivale a 2 básicos.", "isCorrect": false },
+      { "text": "Las troncales en las redes SDH utilizan combinaciones de fibra y par trenzado.", "isCorrect": false },
+      { "text": "Las troncales en las redes SONET utilizan combinaciones de fibra y cobre.", "isCorrect": false },
+      { "text": "La primera es cierta.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "La 6 es cierta.", "isCorrect": false },
+      { "text": "Throughput y offset en una trama son proporcionales.", "isCorrect": false },
+      { "text": "El throughput de una red depende en exclusiva del método de acceso empleado.", "isCorrect": false },
+      { "text": "El throughput de una red es proporcional al flujo de carga.", "isCorrect": false },
+      { "text": "El uso de los protocolos está limitado por el valor de MTU.", "isCorrect": false },
+      { "text": "El throughput de una red es siempre constante.", "isCorrect": false },
+      { "text": "Podemos denominar como “throughput” al volumen de información que fluye a través de un sistema.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "El nivel de transporte puede no estar presente en una comunicación.", "isCorrect": true },
+      { "text": "El nivel 5 coinciden en OSI y TCPIP.", "isCorrect": false },
+      { "text": "Multiplexar y Modular coinciden sólo en las comunicaciones síncronas.", "isCorrect": false },
+      { "text": "ATM es un protocolo de nivel 3.", "isCorrect": false },
+      { "text": "Es posible multiplexar una comunicación a nivel de transporte.", "isCorrect": true },
+      { "text": "Las VLANs son útiles para reducir el tamaño del dominio de difusión y ayudan a separar los segmentos lógicos de una red de área local.", "isCorrect": true },
+      { "text": "Sólo la 1 es cierta.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "ATM está asociado a tecnología FDDI.", "isCorrect": false },
+      { "text": "ADSL está asociado a tecnología SDH.", "isCorrect": false },
+      { "text": "Se puede encapsular ATM sobre SDH.", "isCorrect": true },
+      { "text": "Se puede encapsular ATM sobre SONET.", "isCorrect": true },
+      { "text": "Se puede encapsular Ethernet sobre SDH.", "isCorrect": true },
+      { "text": "PCM es una técnica de modulación.", "isCorrect": true },
+      { "text": "Ninguna de las anteriores es cierta", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "La tecnología SDH cuenta entre sus elementos/dispositivos con multiplexores.", "isCorrect": true },
+      { "text": "Un dispositivo de internetworking que tenga “N” direcciones físicas debe tener “N” direcciones lógicas.", "isCorrect": false },
+      { "text": "Un dispositivo de internetworking que tenga “N” direcciones físicas debe tener “N+1” direcciones lógicas.", "isCorrect": false },
+      { "text": "Las direcciones lógicas de una red dependen de las direcciones físicas.", "isCorrect": false },
+      { "text": "Las direcciones físicas dependen de las direcciones lógicas", "isCorrect": false },
+      { "text": "Es posible tener en un mismo conmutador tecnología ATM y Gigabit Ethernet integradas.", "isCorrect": true },
+      { "text": "Ninguna de las anteriores es cierta", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Se utilizan números de secuencia en el modelo de datagrama.", "isCorrect": true },
+      { "text": "Los circuitos virtuales conmutados utilizan una vía de transmisión dedicada pero ha de ser asíncrona.", "isCorrect": false },
+      { "text": "En la conmutación de paquetes los nodos han de realizar cambios de velocidad", "isCorrect": false },
+      { "text": "El costo en la conmutación de paquetes se realiza en función del tiempo de conexión.", "isCorrect": false },
+      { "text": "El costo en la conmutación de circuitos se realiza en función del coste de ruta.", "isCorrect": false },
+      { "text": "El tiempo empleado en la conmutación de circuitos es proporcional al flujo de datos que circula..", "isCorrect": false },
+      { "text": "Sólo la segunda respuesta es cierta.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "El tamaño máximo de paquete en Ethernet es múltiplo de 53 bytes.", "isCorrect": false },
+      { "text": "El tamaño mínimo del paquete en Ethernet se adoptó tomando la media aritmética del “throughput”.", "isCorrect": false },
+      { "text": "Las redes Frame Relay son más rápidas que las ATM.", "isCorrect": false },
+      { "text": "Sobre redes Frame Relay se puede transmitir voz.", "isCorrect": true },
+      { "text": "Si cambio de método de acceso disminuirá la velocidad de transmisión.", "isCorrect": false },
+      { "text": "Si cambio de método de acceso aumentará la velocidad de modulación.", "isCorrect": false },
+      { "text": "Ninguna es cierta.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "En Ethernet nunca existe gap entre tramas.", "isCorrect": false },
+      { "text": "En tecnología Ethernet el primer campo es el preámbulo que indica el inicio de trama.", "isCorrect": true },
+      { "text": "Los puentes se diseñan para uso entre LAN's que usan protocolos idénticos en la capa física y MAC (de acceso al medio); aunque existen otros más sofisticados que permiten la conversión de formatos MAC diferentes (Ethernet-Token Ring por ejemplo).", "isCorrect": true },
+      { "text": "Los conmutadores pueden tener la capacidad de aprender y almacenar las direcciones de la capa 2 (direcciones MAC) de los dispositivos alcanzables a través de cada uno de sus puertos.", "isCorrect": true },
+      { "text": "La dirección MAC es utilizada en las tecnologías: Ethernet, 802.3 CSMA/CD, 802.5 o redes en anillo.", "isCorrect": true },
+      { "text": "La dirección MAC es utilizada en las tecnologías: 802.11 redes inalámbricas (Wi-Fi), Asynchronous Transfer Mode.", "isCorrect": false },
+      { "text": "Sólo la respuesta 1 es cierta..", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas",
+    "options": [
+      { "text": "Es posible instalar una red ATM puro extremo a extremo (desde cliente a servidores, pasando por conmutadores y routers).", "isCorrect": true },
+      { "text": "Si cambiamos a tecnología ATM habrá que modificar las reglas en los firewalls presentes en la red.", "isCorrect": false },
+      { "text": "Conmutador y Hub es un mismo concepto.", "isCorrect": false },
+      { "text": "Conectar firewalls a redes corporativas es una práctica habitual.", "isCorrect": true },
+      { "text": "Las redes ATM soportan mayores velocidades que las SDH.", "isCorrect": false },
+      { "text": "El EGPs (Exterior Gateway Protocol) está presente en los dispositivos de internetworking.", "isCorrect": false },
+      { "text": "Sólo es cierta la respuesta 5.", "isCorrect": false }
+    ]
+  },
+
+
+
+
+  {
+    "question": "En la tecnología FTTH (Fiber to the Home):",
+    "options": [
+      { "text": "Se utilizan dos fibras ópticas", "isCorrect": false },
+      { "text": "Sólo se utiliza una fibra óptica pero se logra enviar y transmitir datos de manera bidireccional", "isCorrect": true },
+      { "text": "Emplea la técnica WDM (Wavelength Division Multiplexing) junto con ATM.", "isCorrect": false },
+      { "text": "Emplea la técnica WDM (Wavelength Division Multiplexing) junto con SDH.", "isCorrect": false },
+      { "text": "Emplea componentes ópticos especiales en los extremos de la fibra, conocidos como multiplexores y desmultiplexores.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Las diferencias entre una red FTTH (Fiber to the Home) y una red GPON (Gigabit Passive Optical Network) son:",
+    "options": [
+      { "text": "En FTTH, la fibra óptica se extiende hasta cada hogar o negocio (topología punto a punto).", "isCorrect": true },
+      { "text": "FTTH emplea el mismo rango de frecuencuas que ADSL.", "isCorrect": false },
+      { "text": "GPON logra una mayor eficiencia en el uso de la fibra óptica al compartir el ancho de banda entre múltiples usuarios utilizando división de tiempo y multiplexación.", "isCorrect": true },
+      { "text": "GPON puede soportar velocidades más altas, ya que utiliza técnicas de multiplexación y división de tiempo para compartir el ancho de banda entre múltiples usuarios.", "isCorrect": true },
+      { "text": "GPON es una tecnología específica utilizada en la implementación de redes FTTH.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "En relación a la tecnología ATM podemos afirmar que:",
+    "options": [
+      { "text": "ATM no se puede integrar con redes Ethernet", "isCorrect": false },
+      { "text": "ATM emplea conmutación de circuitos y de paquetes de forma selectiva.", "isCorrect": false },
+      { "text": "ATM emplea conmutación de circuitos sobre SONET.", "isCorrect": false },
+      { "text": "ATM puede transportar datagramas", "isCorrect": true },
+      { "text": "ATM es una tecnología de transporte que segmenta y transmite datos en forma de celdas a través de una red de telecomunicaciones.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "En relación a la tecnología SDH (Synchronous Digital Hierarchy) podemos afirmar que:",
+    "options": [
+      { "text": "SDH es una tecnología de conmutación de circuitos y paquetes utilizada en redes de área amplia (WAN) para transmitir datos en tiempo real, como videoconferencias y transmisiones en vivo.", "isCorrect": false },
+      { "text": "SDH comprime los datos para facilitar su almacenamiento y transmisión", "isCorrect": false },
+      { "text": "SDH es una tecnología de multiplexación y transmisión sincronizada utilizada en redes de telecomunicaciones para transmitir datos y voz a través de enlaces de fibra óptica.", "isCorrect": true },
+      { "text": "SDH emplea tecnología de encriptación que protege la privacidad de los datos transmitidos en una red.", "isCorrect": false },
+      { "text": "SDH es una tecnología de enrutamiento dinámico utilizada para determinar la mejor ruta de transmisión de datos en una red.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "La tecnología WIFI 6 (802.11ax):",
+    "options": [
+      { "text": "Surge como alternativa a 5G.", "isCorrect": false },
+      { "text": "Permite llevar paquetes SDH.", "isCorrect": false },
+      { "text": "Utiliza una frecuencia de banda de 2.4 GHz exclusivamente.", "isCorrect": false },
+      { "text": "Proporciona una mayor eficiencia energética que versiones anteriores.", "isCorrect": true },
+      { "text": "Permite una mayor cobertura que WiMAX.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "En la relación entre ATM (Asynchronous Transfer Mode) y MPLS (Multiprotocol Label Switching) podemos afirmar que:",
+    "options": [
+      { "text": "Inicialmente, ATM fue ampliamente adoptado como una tecnología de conmutación de paquetes. Proporcionaba una solución eficiente para el transporte de tráfico.", "isCorrect": true },
+      { "text": "MPLS se desarrolló como una tecnología de enrutamiento basada en etiquetas que proporciona una mayor flexibilidad y escalabilidad en la conmutación de paquetes.", "isCorrect": true },
+      { "text": "A medida que MPLS ganaba popularidad y se consolidaba como una tecnología de enrutamiento más versátil y eficiente, muchas redes que utilizaban inicialmente ATM migraron hacia MPLS.", "isCorrect": true },
+      { "text": "Algunas implementaciones de MPLS permitieron la coexistencia y la capacidad de transportar tráfico ATM a través de redes MPLS (los paquetes ATM se pueden encapsular y transmitir utilizando MPLS como un mecanismo de transporte).", "isCorrect": true },
+      { "text": "MPLS puede ofrecer compatibilidad con el tráfico ATM y permitir la migración gradual de las redes basadas en ATM hacia soluciones basadas en MPLS.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Las diferencias entre una red ATM y una red SDH son:",
+    "options": [
+      { "text": "ATM es una tecnología de conmutación de paquetes, mientras que la red SDH es una tecnología de multiplexación y transmisión sincronizada.", "isCorrect": true },
+      { "text": "ATM ofrece velocidades de transmisión variables y se adapta a diferentes necesidades de ancho de banda.", "isCorrect": true },
+      { "text": "SDH ofrece velocidades de transmisión síncronas y predefinidas, como STM-1, STM-4, STM-16, etc", "isCorrect": true },
+      { "text": "En ATM, no hay una jerarquía fija, ya que puede adaptarse a diferentes requerimientos de ancho de banda.", "isCorrect": true },
+      { "text": "SDH puede utilizarse como el medio de transporte principal, mientras que ATM se utiliza para la conmutación y el transporte de diferentes tipos de tráfico dentro de la red. Esto permite un enfoque híbrido para el diseño de redes, aprovechando las fortalezas de ambas tecnologías.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "¿Cuáles son las funciones principales del nivel de enlace en el modelo de OSI (Open Systems Interconnection)?",
+    "options": [
+      { "text": "Establecer y finalizar las conexiones de transporte entre dispositivos de red.", "isCorrect": false },
+      { "text": "Realizar el enrutamiento fijo de los datagramas.", "isCorrect": false },
+      { "text": "Detectar y corregir errores en la transmisión de datos.", "isCorrect": true },
+      { "text": "Proporcionar servicios al nivel 4 y superiores.", "isCorrect": false },
+      { "text": "Definir el formato de los datagramas.", "isCorrect": false },
+      { "text": "Gestionar el flujo de datos entre nodos adyacentes en la red.", "isCorrect": true },
+      { "text": "Establecer la seguridad de la comunicación en la red.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "En un diseño de red",
+    "options": [
+      { "text": "Se ha de utilizar un único proveedor de equipos de red.", "isCorrect": false },
+      { "text": "Se ha de minimizar la redundancia de enlaces y dispositivos.", "isCorrect": false },
+      { "text": "Se ha de priorizar la simplicidad y la escalabilidad.", "isCorrect": true },
+      { "text": "La topología lógica debe coincidir con la física.", "isCorrect": false },
+      { "text": "Se ha de analizar el tráfico previamente.", "isCorrect": false },
+      { "text": "Se deben considerar los requisitos de ancho de banda.", "isCorrect": true },
+      { "text": "Ninguna de las anteriores es cierta", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Diseñar redes a tres niveles (con una arquitectura de acceso, distribución y core) proporciona como ventajas:",
+    "options": [
+      { "text": "Escalabilidad: Cada nivel puede expandirse independientemente.", "isCorrect": true },
+      { "text": "Seguridad: Se podrían aplicar políticas de seguridad específicas por niveles.", "isCorrect": true },
+      { "text": "Rendimiento optimizado: La separación en niveles permite una gestión más eficiente del tráfico.", "isCorrect": true },
+      { "text": "Flexibilidad y adaptabilidad: La arquitectura de tres niveles se adaptarse mejor a diferentes necesidades y cambios en la red.", "isCorrect": true },
+      { "text": "Gestión: La segmentación en niveles facilita la administración de la red.", "isCorrect": true },
+      { "text": "Interoperabilidad: Para la futura integración de los servicios de red.", "isCorrect": false },
+      { "text": "Integración: Para la futura interoperabilidad de los servicios de red.", "isCorrect": false }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "question": "Sobre redes LAN y WAN",
+    "options": [
+      { "text": "Una red LAN se extiende geográficamente más que una red WAN.", "isCorrect": false },
+      { "text": "En una red WAN es habitual el uso de tecnologías de transporte como MPLS.", "isCorrect": true },
+      { "text": "Una red de campus es un ejemplo de red LAN extendida.", "isCorrect": true },
+      { "text": "Los dispositivos conectados por Ethernet forman una red PAN.", "isCorrect": false },
+      { "text": "Las redes LAN suelen estar organizadas en estrella o árbol jerárquico.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Sobre DOCSIS",
+    "options": [
+      { "text": "DOCSIS se utiliza para transmitir datos por redes de cable coaxial.", "isCorrect": true },
+      { "text": "Permite compartir infraestructura con señales de televisión.", "isCorrect": true },
+      { "text": "Está basado en redes de tipo HFC (Hybrid Fiber-Coax).", "isCorrect": true },
+      { "text": "Cada cliente tiene un canal físico dedicado hasta el nodo óptico.", "isCorrect": false },
+      { "text": "Se utiliza exclusivamente en redes internas empresariales.", "isCorrect": false },
+      { "text": "Puede ofrecer velocidades superiores a 1 Gbps en versiones modernas.", "isCorrect": true },
+      { "text": "Es una alternativa a FTTH en ciertos entornos urbanos.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Sobre PLC",
+    "options": [
+      { "text": "PLC utiliza el cableado eléctrico para transmitir datos de red.", "isCorrect": true },
+      { "text": "Es ideal para grandes redes corporativas que requieren alta seguridad.", "isCorrect": false },
+      { "text": "Su velocidad real depende de la calidad de la instalación eléctrica.", "isCorrect": true },
+      { "text": "PLC necesita configuración compleja y administración centralizada.", "isCorrect": false },
+      { "text": "Opera en frecuencias superiores a la de la red eléctrica convencional.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Sobre SDH",
+    "options": [
+      { "text": "SDH es una tecnología digital síncrona de transporte por fibra.", "isCorrect": true },
+      { "text": "Está diseñada para redes troncales de alta capacidad.", "isCorrect": true },
+      { "text": "Emplea técnicas de multiplexación en el dominio de la frecuencia.", "isCorrect": false },
+      { "text": "Puede transportar voz, datos y vídeo en jerarquía estructurada.", "isCorrect": true },
+      { "text": "Ha sido reemplazada por completo por OTN y DWDM.", "isCorrect": false },
+      { "text": "Utiliza tramas de tamaño fijo con intervalos temporales constantes.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Sobre FTTH y GPON",
+    "options": [
+      { "text": "FTTH es el modelo de despliegue físico y GPON es la tecnología lógica usada en él.", "isCorrect": true },
+      { "text": "GPON permite dividir una sola fibra usando splitters pasivos en la red FTTH.", "isCorrect": true },
+      { "text": "En redes GPON, los datos descendentes se transmiten a todos los ONT simultáneamente.", "isCorrect": true },
+      { "text": "FTTH utiliza multiplexación óptica por longitud de onda (como DWDM).", "isCorrect": false },
+      { "text": "GPON usa técnicas de acceso compartido en el canal ascendente.", "isCorrect": true },
+      { "text": "FTTH y GPON son incompatibles entre sí.", "isCorrect": false },
+      { "text": "En FTTH, el OLT suele estar ubicado en la central del proveedor.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Sobre 5G",
+    "options": [
+      { "text": "5G utiliza frecuencias más altas que 4G, lo que mejora la velocidad pero reduce el alcance.", "isCorrect": true },
+      { "text": "Está diseñado para admitir comunicaciones ultra fiables y de baja latencia.", "isCorrect": true },
+      { "text": "Su despliegue requiere más estaciones base que generaciones anteriores.", "isCorrect": true },
+      { "text": "Solo puede usarse en entornos urbanos con cobertura completa.", "isCorrect": false },
+      { "text": "Puede superar velocidades de 1Gbps en condiciones ideales.", "isCorrect": true },
+      { "text": "5G utiliza conmutación por paquetes, como 4G.", "isCorrect": true },
+      { "text": "Es incompatible con redes LTE existentes.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sobre Carrier Ethernet",
+    "options": [
+      { "text": "Carrier Ethernet extiende las capacidades de Ethernet a redes de operador.", "isCorrect": true },
+      { "text": "Es una solución usada únicamente en redes domésticas.", "isCorrect": false },
+      { "text": "Permite servicios punto a punto, multipunto y VLANs extendidas.", "isCorrect": true },
+      { "text": "Ofrece calidad de servicio y gestión más avanzadas que Ethernet tradicional.", "isCorrect": true },
+      { "text": "Es incompatible con redes MPLS y OTN.", "isCorrect": false },
+      { "text": "Se utiliza para ofrecer servicios de datos entre sedes de empresas.", "isCorrect": true },
+      { "text": "Opera a nivel de capa de enlace con soporte para funciones de capa 3.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Modelo OSI – Sobre la capa de red",
+    "options": [
+      { "text": "La capa de red se encarga del direccionamiento lógico mediante direcciones IP.", "isCorrect": true },
+      { "text": "Protocolos como IP, ICMP y ARP pertenecen a esta capa.", "isCorrect": false },
+      { "text": "Los routers operan en la capa de red.", "isCorrect": true },
+      { "text": "Esta capa se encarga del reensamblaje de fragmentos en el destino final.", "isCorrect": true },
+      { "text": "La capa de red trabaja con tramas y direcciones MAC.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Diseño de redes – Sobre arquitectura jerárquica",
+    "options": [
+      { "text": "La arquitectura jerárquica separa la red en capas con funciones distintas.", "isCorrect": true },
+      { "text": "El núcleo se centra en velocidad, redundancia y mínima lógica.", "isCorrect": true },
+      { "text": "La capa de distribución se conecta directamente con los dispositivos finales.", "isCorrect": false },
+      { "text": "Acceso, distribución y núcleo son los tres niveles típicos.", "isCorrect": true },
+      { "text": "Aplicar políticas como ACL o QoS suele hacerse en la capa de acceso.", "isCorrect": true },
+      { "text": "Esta arquitectura mejora la escalabilidad y mantenimiento.", "isCorrect": true },
+      { "text": "El uso de un único nivel jerárquico es preferible por simplicidad.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Diseño de redes – Sobre seguridad y documentación",
+    "options": [
+      { "text": "Documentar VLANs, direcciones IP y servicios es parte del diseño seguro.", "isCorrect": true },
+      { "text": "La segmentación ayuda a limitar la propagación de ataques internos.", "isCorrect": true },
+      { "text": "Una red segura evita el uso de firewalls para mantener el rendimiento.", "isCorrect": false },
+      { "text": "Las listas de control de acceso (ACL) permiten filtrar tráfico en routers y switches.", "isCorrect": true },
+      { "text": "La alta disponibilidad contradice los principios de seguridad.", "isCorrect": false },
+      { "text": "Los logs y registros deben formar parte del diseño desde el inicio.", "isCorrect": true },
+      { "text": "El control de acceso a nivel físico (sala, equipos) también es parte de la seguridad de red.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "CONCEPTOS GENERALES – Sobre NAT, dominios y redes",
+    "options": [
+      { "text": "NAT permite traducir múltiples IP privadas a una sola IP pública.", "isCorrect": true },
+      { "text": "Cada puerto de switch representa un dominio de colisión separado.", "isCorrect": true },
+      { "text": "Un router trabaja exclusivamente a nivel de capa 1.", "isCorrect": false },
+      { "text": "El dominio de broadcast en una red termina en un router.", "isCorrect": true },
+      { "text": "Las direcciones IP del rango 10.0.0.0/8 son públicas.", "isCorrect": false },
+      { "text": "Las redes de tipo punto a punto utilizan una única dirección IP para dos dispositivos.", "isCorrect": true },
+      { "text": "Una dirección IP 169.254.x.x es generada automáticamente si no hay DHCP.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "CONCEPTOS GENERALES - Sobre protocolos y servicios",
+    "options": [
+      { "text": "DNS se utiliza para traducir direcciones IP en nombres legibles.", "isCorrect": true },
+      { "text": "SMTP es un protocolo de capa 2 para la transmisión de voz.", "isCorrect": false },
+      { "text": "HTTP y HTTPS operan en la capa de aplicación del modelo OSI.", "isCorrect": true },
+      { "text": "DHCP asigna direcciones IP dinámicamente en una red local.", "isCorrect": true },
+      { "text": "FTP cifra siempre los datos transmitidos entre cliente y servidor.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnologías de acceso - Sobre SDSL",
+    "options": [
+      { "text": "SDSL permite velocidades de subida y bajada iguales.", "isCorrect": true },
+      { "text": "Utiliza la fibra óptica como medio de transmisión.", "isCorrect": false },
+      { "text": "Es habitual en entornos empresariales que requieren simetría en la conexión.", "isCorrect": true },
+      { "text": "Permite el uso simultáneo de Internet y telefonía analógica en el mismo par de cobre.", "isCorrect": true },
+      { "text": "Es una tecnología más moderna y rápida que FTTH.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnologías de acceso - Sobre FTTH",
+    "options": [
+      { "text": "FTTH significa que la fibra óptica llega hasta el hogar del cliente.", "isCorrect": true },
+      { "text": "Utiliza splitters activos que requieren alimentación en la red.", "isCorrect": false },
+      { "text": "Tiene una velocidad de subida inferior a la de bajada en la mayoría de servicios residenciales.", "isCorrect": true },
+      { "text": "Requiere cable coaxial desde el terminal óptico hasta el router.", "isCorrect": false },
+      { "text": "Permite servicios de televisión, voz e Internet sobre la misma infraestructura.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías inalámbricas - Sobre 5G",
+    "options": [
+      { "text": "5G utiliza frecuencias más altas que 4G, lo que mejora la velocidad pero reduce el alcance.", "isCorrect": true },
+      { "text": "Está diseñado para admitir comunicaciones ultra fiables y de baja latencia.", "isCorrect": true },
+      { "text": "Su despliegue requiere más estaciones base que generaciones anteriores.", "isCorrect": true },
+      { "text": "Solo puede usarse en entornos urbanos con cobertura completa.", "isCorrect": false },
+      { "text": "Puede superar velocidades de 1Gbps en condiciones ideales.", "isCorrect": true },
+      { "text": "El 5G utiliza conmutación por paquetes, como 4G.", "isCorrect": true },
+      { "text": "Es compatible con redes LTE existentes.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías inalámbricas - Sobre redes Wi-Fi",
+    "options": [
+      { "text": "Wi-Fi 6 mejora la eficiencia en entornos densos gracias al uso de OFDMA.", "isCorrect": true },
+      { "text": "El estándar 802.11n es más nuevo que el 802.11ax.", "isCorrect": false },
+      { "text": "Wi-Fi utiliza frecuencias en bandas libres como 2.4 GHz y 5 GHz.", "isCorrect": true },
+      { "text": "Un punto de acceso Wi-Fi actúa como switch inalámbrico.", "isCorrect": true },
+      { "text": "La cobertura de Wi-Fi suele ser mayor que la de 5G.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnologías de Transporte - Sobre MPLS",
+    "options": [
+      { "text": "MPLS utiliza etiquetas para enrutar el tráfico sin depender solo de la IP.", "isCorrect": true },
+      { "text": "Opera exclusivamente en la capa física del modelo OSI.", "isCorrect": false },
+      { "text": "Permite establecer rutas predefinidas con calidad de servicio garantizada.", "isCorrect": true },
+      { "text": "Es utilizado en redes troncales por proveedores de Internet.", "isCorrect": true },
+      { "text": "Es incompatible con tecnologías como OTN o SDH.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnologías de transporte – Sobre OTN",
+    "options": [
+      { "text": "OTN encapsula protocolos como Ethernet o IP para transporte eficiente.", "isCorrect": true },
+      { "text": "Está pensado para redes LAN con cobertura de corto alcance.", "isCorrect": false },
+      { "text": "Utiliza jerarquía digital síncrona como base estructural.", "isCorrect": true },
+      { "text": "OTN y DWDM pueden coexistir para maximizar el uso de la fibra.", "isCorrect": true },
+      { "text": "Es una tecnología de transporte utilizada en redes de operador.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Modelo OSI – Sobre la capa de enlace",
+    "options": [
+      { "text": "La capa de enlace se encarga de encapsular los datos en tramas.", "isCorrect": true },
+      { "text": "Gestiona el direccionamiento lógico mediante direcciones IP.", "isCorrect": false },
+      { "text": "Protocolos como Ethernet y PPP operan en esta capa.", "isCorrect": true },
+      { "text": "Incluye mecanismos de control de errores como CRC.", "isCorrect": true },
+      { "text": "Los switches operan principalmente en esta capa.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Diseño de redes – Sobre segmentación y escalabilidad",
+    "options": [
+      { "text": "Segmentar una red en VLANs permite aislar tráfico por departamentos o servicios.", "isCorrect": true },
+      { "text": "Un diseño escalable permite aumentar el tamaño de la red sin rehacer su arquitectura.", "isCorrect": true },
+      { "text": "Las VLANs permiten crear múltiples subredes físicas en una misma red lógica.", "isCorrect": false },
+      { "text": "Toda la lógica de segmentación debe realizarse en la capa de núcleo.", "isCorrect": false },
+      { "text": "Documentar el direccionamiento IP es parte del diseño lógico.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "CONCEPTOS GENERALES – Sobre dispositivos de red",
+    "options": [
+      { "text": "Un switch trabaja a nivel de la capa 3 para reenviar tráfico entre redes.", "isCorrect": false },
+      { "text": "Un router puede dividir dominios de broadcast.", "isCorrect": true },
+      { "text": "Un hub envía la señal recibida a todos los puertos sin distinguir destino.", "isCorrect": true },
+      { "text": "Los firewalls solo se utilizan en redes grandes para filtrar tráfico externo.", "isCorrect": false },
+      { "text": "Un punto de acceso inalámbrico funciona como bridge entre red cableada y Wi-Fi.", "isCorrect": true },
+      { "text": "Un repetidor opera en la capa física amplificando señales sin procesarlas.", "isCorrect": true },
+      { "text": "Los switches gestionan las conexiones usando direcciones MAC.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías de acceso - Sobre ADSL",
+    "options": [
+      { "text": "ADSL proporciona un canal simétrico de subida y bajada de datos.", "isCorrect": false },
+      { "text": "Utiliza el par de cobre telefónico para transmitir datos digitales.", "isCorrect": true },
+      { "text": "Permite el uso simultáneo de telefonía analógica e Internet mediante splitters.", "isCorrect": true },
+      { "text": "ADSL está especialmente diseñada para tráfico empresarial pesado.", "isCorrect": false },
+      { "text": "Su rendimiento disminuye cuanto mayor es la distancia a la central.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías de acceso - Sobre GPON",
+    "options": [
+      { "text": "GPON permite una topología punto a multipunto con splitters pasivos.", "isCorrect": true },
+      { "text": "En GPON, el OLT se encuentra en el domicilio del usuario.", "isCorrect": false },
+      { "text": "Todos los ONT conectados al mismo splitter reciben la misma señal descendente.", "isCorrect": true },
+      { "text": "GPON requiere alimentación eléctrica en los dispositivos intermedios.", "isCorrect": false },
+      { "text": "Es habitual cifrar el tráfico descendente para evitar acceso entre usuarios.", "isCorrect": true },
+      { "text": "GPON utiliza técnicas de asignación dinámica de ancho de banda (DBA).", "isCorrect": true },
+      { "text": "Cada ONT puede transmitir de forma simultánea en el canal ascendente sin coordinación.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnologías inalámbricas - Sobre Wi-Fi 6",
+    "options": [
+      { "text": "Wi-Fi 6 corresponde al estándar IEEE 802.11ax.", "isCorrect": true },
+      { "text": "Opera exclusivamente en la banda de 2.4 GHz.", "isCorrect": false },
+      { "text": "Introduce OFDMA para dividir el canal en múltiples subcanales.", "isCorrect": true },
+      { "text": "MU-MIMO solo se aplica en sentido descendente.", "isCorrect": false },
+      { "text": "Mejora el rendimiento en entornos con alta densidad de dispositivos.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías inalámbricas - Sobre LTE (4G)",
+    "options": [
+      { "text": "LTE es una tecnología de acceso móvil conmutada por circuitos.", "isCorrect": false },
+      { "text": "Puede ofrecer velocidades superiores a 100 Mbps en movimiento.", "isCorrect": true },
+      { "text": "Está pensada exclusivamente para uso doméstico y no profesional.", "isCorrect": false },
+      { "text": "La arquitectura de LTE separa plano de usuario y plano de control.", "isCorrect": true },
+      { "text": "Su funcionamiento se basa en la conmutación por paquetes.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías de transporte - Sobre ATM",
+    "options": [
+      { "text": "ATM encapsula los datos en celdas de longitud fija.", "isCorrect": true },
+      { "text": "Utiliza conmutación de circuitos exclusivamente.", "isCorrect": false },
+      { "text": "Es adecuado para transportar tráfico multimedia con requisitos de calidad.", "isCorrect": true },
+      { "text": "La celda ATM tiene un tamaño de 64 bytes.", "isCorrect": false },
+      { "text": "ATM puede coexistir con MPLS en redes troncales.", "isCorrect": true },
+      { "text": "Proporciona control de calidad de servicio (QoS).", "isCorrect": true },
+      { "text": "Es una tecnología actualmente muy extendida en redes locales.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnologías de Transporte - Sobre DWDM",
+    "options": [
+      { "text": "DWDM transmite señales ópticas usando diferentes longitudes de onda.", "isCorrect": true },
+      { "text": "Aumenta la capacidad de una fibra sin necesidad de añadir nuevos hilos físicos.", "isCorrect": true },
+      { "text": "Cada canal DWDM requiere una fibra óptica independiente.", "isCorrect": false },
+      { "text": "DWDM se utiliza en redes troncales de larga distancia.", "isCorrect": true },
+      { "text": "No es compatible con otras tecnologías como OTN o Ethernet.", "isCorrect": false },
+      { "text": "Puede transportar múltiples protocolos simultáneamente.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Modelo OSI - Capa de transporte",
+    "options": [
+      { "text": "TCP y UDP son protocolos de la capa de transporte.", "isCorrect": true },
+      { "text": "UDP garantiza la entrega ordenada de los datos transmitidos.", "isCorrect": false },
+      { "text": "La capa de transporte establece una comunicación extremo a extremo entre aplicaciones.", "isCorrect": true },
+      { "text": "TCP implementa mecanismos de control de flujo y de congestión.", "isCorrect": true },
+      { "text": "La capa de transporte encapsula datos de la capa de red en tramas.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Diseño de redes - Sobre niveles y arquitectura jerárquica",
+    "options": [
+      { "text": "En una red jerárquica, la capa de acceso se conecta a los dispositivos finales.", "isCorrect": true },
+      { "text": "El núcleo se encarga de aplicar políticas de seguridad y QoS.", "isCorrect": false },
+      { "text": "La distribución agrega el tráfico y puede aplicar filtrado o segmentación.", "isCorrect": true },
+      { "text": "Dividir la red en niveles facilita su escalabilidad.", "isCorrect": true },
+      { "text": "Un diseño jerárquico complica el mantenimiento y la gestión diaria.", "isCorrect": false },
+      { "text": "La red debe planificarse pensando únicamente en los requisitos actuales.", "isCorrect": false },
+      { "text": "El modelo de tres capas incluye: acceso, distribución y núcleo.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Diseño de redes - Seguridad y redundancia",
+    "options": [
+      { "text": "La seguridad debe aplicarse en el diseño desde el inicio.", "isCorrect": true },
+      { "text": "Segmentar la red en VLANs permite aislar tráfico sensible.", "isCorrect": true },
+      { "text": "Una red segura debe evitar el uso de firewalls para no limitar el rendimiento.", "isCorrect": false },
+      { "text": "Un IDS bloquea automáticamente los ataques detectados.", "isCorrect": false },
+      { "text": "La redundancia ayuda a prevenir puntos únicos de fallo.", "isCorrect": true },
+      { "text": "El uso de protocolos como HSRP o VRRP proporciona tolerancia en gateways.", "isCorrect": true },
+      { "text": "La documentación de accesos, políticas y equipos es parte del diseño seguro.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "CONCEPTOS GENERALES – Sobre tipos de redes y dispositivos",
+    "options": [
+      { "text": "Una red PAN conecta dispositivos dentro de un mismo edificio corporativo.", "isCorrect": false },
+      { "text": "Un switch filtra tráfico basándose en direcciones IP.", "isCorrect": false },
+      { "text": "Un router permite interconectar redes con diferentes direcciones IP.", "isCorrect": true },
+      { "text": "Un repetidor puede regenerar señales en la capa física.", "isCorrect": true },
+      { "text": "Una red WAN puede estar formada por múltiples redes LAN interconectadas.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnología de transporte – Sobre ATM",
+    "options": [
+      { "text": "ATM encapsula datos en celdas de tamaño fijo.", "isCorrect": true },
+      { "text": "Emplea solo conmutación de circuitos, nunca de paquetes.", "isCorrect": false },
+      { "text": "Es adecuada para tráfico en tiempo real, como voz o vídeo.", "isCorrect": true },
+      { "text": "Cada celda ATM tiene 53 bytes: 48 de datos y 5 de cabecera.", "isCorrect": true },
+      { "text": "ATM se sigue usando ampliamente en redes domésticas.", "isCorrect": false },
+      { "text": "Proporciona niveles de QoS diferenciados por tipo de tráfico.", "isCorrect": true },
+      { "text": "Su flexibilidad le permite integrarse con tecnologías como MPLS.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnologías relacionadas – Sobre ATM y SDH",
+    "options": [
+      { "text": "SDH proporciona el transporte físico síncrono sobre el que puede viajar ATM.", "isCorrect": true },
+      { "text": "Ambas tecnologías se utilizan juntas en redes troncales de operador.", "isCorrect": true },
+      { "text": "ATM encapsula flujos de datos, mientras SDH define cómo multiplexarlos físicamente.", "isCorrect": true },
+      { "text": "SDH y ATM usan el mismo tamaño de celda.", "isCorrect": false },
+      { "text": "SDH puede funcionar sin ATM, pero no al revés en redes clásicas.", "isCorrect": true },
+      { "text": "Estas tecnologías han sido desplazadas por MPLS y OTN en muchas redes actuales.", "isCorrect": true },
+      { "text": "ATM y SDH son equivalentes, ya que ambas operan sobre cobre.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnología de transporte – Sobre MPLS",
+    "options": [
+      { "text": "MPLS utiliza etiquetas para reenviar paquetes, sin necesidad de revisar la cabecera IP.", "isCorrect": true },
+      { "text": "Opera entre capa 2 y capa 3 del modelo OSI.", "isCorrect": true },
+      { "text": "Permite aplicar políticas de calidad de servicio para diferentes flujos.", "isCorrect": true },
+      { "text": "Es exclusivo para redes locales pequeñas.", "isCorrect": false },
+      { "text": "Puede coexistir con OTN y Carrier Ethernet.", "isCorrect": true },
+      { "text": "Se usa en redes de operador para establecer caminos predeterminados.", "isCorrect": true },
+      { "text": "MPLS transmite datos encapsulados siempre en formato ATM.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Tecnología inalámbrica – Sobre Wi-Fi",
+    "options": [
+      { "text": "Wi-Fi es una tecnología de acceso inalámbrico en redes LAN.", "isCorrect": true },
+      { "text": "El estándar 802.11ac permite el uso de MU-MIMO y opera en la banda de 5 GHz.", "isCorrect": true },
+      { "text": "Los puntos de acceso Wi-Fi operan en la capa de red del modelo OSI.", "isCorrect": false },
+      { "text": "Wi-Fi 6 (802.11ax) mejora la eficiencia en entornos con muchos dispositivos conectados.", "isCorrect": true },
+      { "text": "Wi-Fi requiere licencias especiales para operar en bandas ISM.", "isCorrect": false },
+      { "text": "Wi-Fi 6 introdujo OFDMA para optimizar canales entre múltiples usuarios.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnología inalámbrica – Sobre WiMAX",
+    "options": [
+      { "text": "WiMAX proporciona acceso inalámbrico de largo alcance.", "isCorrect": true },
+      { "text": "Puede considerarse una alternativa inalámbrica a tecnologías de acceso por cable.", "isCorrect": true },
+      { "text": "Opera únicamente en interiores, como Wi-Fi.", "isCorrect": false },
+      { "text": "Se basa en estándares IEEE distintos a los de la familia Wi-Fi.", "isCorrect": true },
+      { "text": "Puede dar servicio a múltiples usuarios en áreas metropolitanas.", "isCorrect": true },
+      { "text": "Usa una arquitectura punto a punto siempre.", "isCorrect": false },
+      { "text": "Es una tecnología aún utilizada en ciertas regiones rurales o países en desarrollo.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Tecnología de aplicación – Sobre VoIP",
+    "options": [
+      { "text": "VoIP permite transmitir voz a través de redes IP.", "isCorrect": true },
+      { "text": "Utiliza protocolos como SIP y RTP.", "isCorrect": true },
+      { "text": "Siempre garantiza calidad de servicio incluso en redes congestionadas.", "isCorrect": false },
+      { "text": "Puede funcionar sobre redes Wi-Fi, LTE o Ethernet.", "isCorrect": true },
+      { "text": "La latencia y el jitter son parámetros críticos en VoIP.", "isCorrect": true },
+      { "text": "El tráfico VoIP es transportado generalmente usando TCP para evitar pérdida.", "isCorrect": false },
+      { "text": "VoIP puede formar parte de una red convergente con datos y vídeo.", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "Modelo OSI – Sobre la capa de presentación",
+    "options": [
+      { "text": "La capa de presentación se encarga de cifrar y descifrar datos.", "isCorrect": true },
+      { "text": "Codifica los datos para ser entendidos por la capa de aplicación.", "isCorrect": true },
+      { "text": "Protocolos como FTP y HTTP operan exclusivamente en esta capa.", "isCorrect": false },
+      { "text": "La compresión y la conversión de formato ocurren aquí.", "isCorrect": true },
+      { "text": "Es responsable del direccionamiento lógico IP.", "isCorrect": false },
+      { "text": "Esta capa puede trabajar con formatos como JPEG o ASCII.", "isCorrect": true },
+      { "text": "Se sitúa justo debajo de la capa de transporte.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sobre análisis y requisitos previos, en un diseño red:",
+    "options": [
+      { "text": "Comprender los requisitos y objetivos del negocio es fundamental para diseñar una red adecuada.", "isCorrect": true },
+      { "text": "La topología define la estructura física y lógica de la red; elegir correctamente mejora la conectividad y escalabilidad.", "isCorrect": true },
+      { "text": "Diseñar la red con suficiente capacidad y escalabilidad permite soportar el crecimiento futuro.", "isCorrect": true },
+      { "text": "Si hay aplicaciones sensibles al retardo o ancho de banda, deben implementarse mecanismos de QoS.", "isCorrect": true },
+      { "text": "Elegir estándares y protocolos adecuados asegura la interoperabilidad con otros sistemas y dispositivos.", "isCorrect": true },
+      { "text": "El uso exclusivo de soluciones propietarias mejora la compatibilidad y flexibilidad del diseño.", "isCorrect": false },
+      { "text": "El análisis del tráfico esperado no es necesario si la red es pequeña.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Sobre arquitectura jerárquica y sus ventajas, diseñar redes a tres niveles (acceso, distribución y core) proporciona:",
+    "options": [
+      { "text": "Que cada nivel pueda expandirse de forma independiente sin afectar a los demás.", "isCorrect": true },
+      { "text": "Posibilidad de aplicar políticas de seguridad y filtrado específicas en cada nivel.", "isCorrect": true },
+      { "text": "Mejora la capacidad de adaptación ante nuevas necesidades o cambios de red.", "isCorrect": true },
+      { "text": "Mayor interoperabilidad con otras redes si se aplican estándares.", "isCorrect": true },
+      { "text": "Mayor redundancia al poder diseñar múltiples caminos entre niveles.", "isCorrect": true },
+      { "text": "Una arquitectura más sencilla de mantener, escalar y documentar.", "isCorrect": true },
+      { "text": "Una disminución general del rendimiento debido a la separación de capas.", "isCorrect": false }
     ]
   }
 ]
