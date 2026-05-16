@@ -11,27 +11,52 @@
   <div class="container">
     <h1>REPASO REDES Y TECNOLOGÍAS DE LA INFORMACIÓN</h1>
 
-    <!-- Pantalla de inicio -->
     <div id="startScreen" class="card">
       <div class="alert-box">
         ADVERTENCIA: Este test puede contener algún error
       </div>
       <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
       
-      <div class="settings-group">
-        <label for="numQuestions">¿Cuántas preguntas deseas realizar?</label>
-        <input type="number" id="numQuestions" min="1" value="10">
-        <small id="maxQuestionsHint" class="text-muted"></small>
+      <div class="settings-wrapper">
+        <div class="settings-group">
+          
+          <div class="setting-item">
+            <label>Modo de juego:</label>
+            <div class="mode-options">
+              <label class="mode-label">
+                <input type="radio" name="quizMode" value="examen" checked>
+                <div class="mode-text">
+                  <strong>Modo Examen</strong>
+                  <span>Corrección al final del test.</span>
+                </div>
+              </label>
+              <label class="mode-label">
+                <input type="radio" name="quizMode" value="estudio">
+                <div class="mode-text">
+                  <strong>Modo Estudio</strong>
+                  <span>Comprueba en cada pregunta.</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="setting-item border-top">
+            <label for="numQuestions">¿Cuántas preguntas deseas realizar?</label>
+            <div class="input-row">
+              <input type="number" id="numQuestions" min="1" value="10">
+              <small id="maxQuestionsHint" class="text-muted"></small>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <button class="btn-start" onclick="startQuiz()">Empezar Test</button>
     </div>
 
-    <!-- Pantalla del Test -->
     <div id="quizBox" class="card hidden">
-      <!-- Cabecera del test con botón de volver -->
       <div class="quiz-header">
-        <button class="btn-back" onclick="goBackToStart()">⬅ Volver</button>
+        <button class="btn-back" onclick="goBackToStart()">⬅ Volver al inicio</button>
         <span id="progress"></span>
       </div>
 
@@ -41,13 +66,15 @@
       <div class="nav-buttons">
         <div class="action-buttons">
           <button id="prevBtn" class="btn-nav" onclick="prevQuestion()">⬅ Anterior</button>
-          <button id="nextBtn" class="btn-next" onclick="nextQuestion()">Siguiente ➡</button>
+          
+          <button id="checkBtn" class="btn-check hidden" onclick="checkAnswer()">Comprobar</button>
+          
+          <button id="nextBtn" class="btn-next hidden" onclick="nextQuestion()">Siguiente ➡</button>
           <button id="finishBtn" class="btn-finish hidden" onclick="endQuiz()">Finalizar</button>
         </div>
       </div>
     </div>
 
-    <!-- Pantalla de Resultados -->
     <div id="summaryBox" class="card hidden">
       <h2 id="scoreTitle"></h2>
       <p id="scoreSubtitle" class="text-muted"></p>
@@ -61,6 +88,8 @@
   let questions = [];
   let current = 0;
   let userAnswers = []; 
+  let hasChecked = []; 
+  let isStudyMode = false; // Variable para saber en qué modo estamos
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -76,12 +105,12 @@
       allQuestions = data;
       
       const hint = document.getElementById("maxQuestionsHint");
-      if (typeof hint === "object" && hint !== null) {
+      if (typeof hint === "object" && hint) {
         hint.innerText = `(Máximo disponible: ${allQuestions.length})`;
       }
 
       const input = document.getElementById("numQuestions");
-      if (typeof input === "object" && input !== null) {
+      if (typeof input === "object" && input) {
         input.max = allQuestions.length;
         input.value = allQuestions.length; 
       }
@@ -98,12 +127,23 @@
       return;
     }
 
+    // Comprobar qué modo está seleccionado
+    const modeRadios = document.getElementsByName("quizMode");
+    isStudyMode = false;
+    modeRadios.forEach(radio => {
+      if (radio.checked === true) {
+        if (radio.value === "estudio") {
+          isStudyMode = true;
+        }
+      }
+    });
+
     let selectedCount = allQuestions.length;
     const inputElement = document.getElementById("numQuestions");
     
-    if (typeof inputElement === "object" && inputElement !== null) {
+    if (typeof inputElement === "object" && inputElement) {
       const parsedValue = parseInt(inputElement.value, 10);
-      if (typeof parsedValue === "number" && isNaN(parsedValue) === false) {
+      if (typeof parsedValue === "number" && Number.isNaN(parsedValue) === false) {
         selectedCount = parsedValue;
       }
     }
@@ -120,6 +160,7 @@
     
     questions = shuffled.slice(0, selectedCount);
     userAnswers = new Array(questions.length).fill(undefined).map(() => []);
+    hasChecked = new Array(questions.length).fill(false);
 
     document.getElementById("startScreen").classList.add("hidden");
     document.getElementById("quizBox").classList.remove("hidden");
@@ -132,12 +173,19 @@
     current = 0;
   }
 
+  function checkAnswer() {
+    hasChecked[current] = true; 
+    showQuestion(); 
+  }
+
   function showQuestion() {
     const q = questions[current];
     document.getElementById("questionText").innerText = `${current + 1}. ${q.question}`;
 
     const container = document.getElementById("optionsContainer");
     container.innerHTML = "";
+    
+    const isChecked = hasChecked[current];
 
     q.options.forEach((opt, index) => {
       const label = document.createElement("label");
@@ -147,19 +195,38 @@
       checkbox.type = "checkbox";
       checkbox.value = index;
       
-      if (userAnswers[current].includes(index) === true) {
+      const isSelected = userAnswers[current].includes(index);
+      const isCorrectOption = opt.isCorrect === true;
+
+      if (isSelected === true) {
         checkbox.checked = true;
       }
 
-      checkbox.onchange = () => {
-        if (checkbox.checked === true) {
-          if (userAnswers[current].includes(index) === false) {
-            userAnswers[current].push(index);
+      // Lógica visual solo si es Modo Estudio Y ya se ha comprobado
+      if (isStudyMode === true) {
+        if (isChecked === true) {
+          checkbox.disabled = true;
+          
+          if (isCorrectOption === true) {
+            label.classList.add("correct-answer");
+          } else if (isSelected === true) {
+            label.classList.add("wrong-answer");
           }
-        } else {
-          userAnswers[current] = userAnswers[current].filter(i => i === index ? false : true);
         }
-      };
+      }
+
+      // Si no está deshabilitado el checkbox, le añadimos el evento
+      if (checkbox.disabled === false) {
+        checkbox.onchange = () => {
+          if (checkbox.checked === true) {
+            if (userAnswers[current].includes(index) === false) {
+              userAnswers[current].push(index);
+            }
+          } else {
+            userAnswers[current] = userAnswers[current].filter(i => i === index ? false : true);
+          }
+        };
+      }
 
       label.appendChild(checkbox);
       label.appendChild(document.createTextNode(opt.text));
@@ -168,14 +235,39 @@
 
     document.getElementById("progress").innerText = `Pregunta ${current + 1} de ${questions.length}`;
 
-    document.getElementById("prevBtn").disabled = current === 0;
-    
-    if (current === questions.length - 1) {
-      document.getElementById("nextBtn").classList.add("hidden");
-      document.getElementById("finishBtn").classList.remove("hidden");
+    // Gestión de botones según el modo
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const checkBtn = document.getElementById("checkBtn");
+    const finishBtn = document.getElementById("finishBtn");
+
+    prevBtn.disabled = current === 0;
+
+    if (isStudyMode === true) {
+      if (isChecked === false) {
+        checkBtn.classList.remove("hidden");
+        nextBtn.classList.add("hidden");
+        finishBtn.classList.add("hidden");
+      } else {
+        checkBtn.classList.add("hidden");
+        if (current === questions.length - 1) {
+          nextBtn.classList.add("hidden");
+          finishBtn.classList.remove("hidden");
+        } else {
+          nextBtn.classList.remove("hidden");
+          finishBtn.classList.add("hidden");
+        }
+      }
     } else {
-      document.getElementById("nextBtn").classList.remove("hidden");
-      document.getElementById("finishBtn").classList.add("hidden");
+      // Si estamos en Modo Examen
+      checkBtn.classList.add("hidden");
+      if (current === questions.length - 1) {
+        nextBtn.classList.add("hidden");
+        finishBtn.classList.remove("hidden");
+      } else {
+        nextBtn.classList.remove("hidden");
+        finishBtn.classList.add("hidden");
+      }
     }
   }
 
