@@ -48,27 +48,13 @@ h1 {
 
 .text-muted { color: var(--text-muted); }
 
-/* ========================================= */
-/* PANTALLA DE INICIO                        */
-/* ========================================= */
-
-.settings-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
+/* Grupo de configuración inicial */
 .settings-group {
   margin: 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  background: #334155;
-  padding: 20px 30px;
-  border-radius: 12px;
-  max-width: 450px;
-  width: 100%;
+  gap: 10px;
 }
 
 .settings-group label {
@@ -76,27 +62,16 @@ h1 {
   font-weight: bold;
 }
 
-.input-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .settings-group input[type="number"] {
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid #475569;
-  background: var(--card);
+  background: #334155;
   color: white;
   text-align: center;
-  width: 90px;
+  width: 120px;
   font-size: 18px;
-  font-weight: bold;
 }
-
-/* ========================================= */
-/* BOTONES GENERALES                         */
-/* ========================================= */
 
 button {
   padding: 12px 24px;
@@ -114,17 +89,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.btn-start { 
-  background: var(--success); 
-  font-size: 18px; 
-  padding: 15px 30px; 
-  width: 100%; 
-  max-width: 300px; 
-  margin-top: 10px;
-}
+.btn-start { background: var(--success); font-size: 18px; padding: 15px 30px; width: 100%; max-width: 300px; }
 .btn-start:hover { background: #16a34a; transform: scale(1.02); }
 
-/* Cabecera del test (Volver y Progreso) */
+/* Estilos de la cabecera y botón volver */
 .quiz-header {
   display: flex;
   justify-content: space-between;
@@ -135,16 +103,19 @@ button:disabled {
 }
 
 .btn-back {
-  background: #334155;
-  color: white;
+  background: transparent;
+  color: var(--text-muted);
   border: 1px solid #475569;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .btn-back:hover {
-  background: #475569;
+  background: #334155;
+  color: white;
 }
+
+#progress { color: var(--text-muted); font-weight: bold; }
 
 /* Botones de navegación (Anterior / Siguiente) */
 .btn-nav { background: #475569; }
@@ -156,26 +127,6 @@ button:disabled {
 
 .btn-finish { background: var(--success); }
 .btn-finish:hover { background: #16a34a; }
-
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-  border-top: 1px solid #334155;
-  padding-top: 20px;
-}
-
-.action-buttons {
-  display: flex;
-  gap: 15px;
-  width: 100%;
-  justify-content: space-between;
-}
-
-/* ========================================= */
-/* OPCIONES DEL TEST                         */
-/* ========================================= */
 
 .options-grid {
   display: flex;
@@ -206,12 +157,23 @@ button:disabled {
   flex-shrink: 0;
 }
 
-#progress { color: var(--text-muted); font-weight: bold; }
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  border-top: 1px solid #334155;
+  padding-top: 20px;
+}
 
-/* ========================================= */
-/* RESUMEN Y ALERTAS                         */
-/* ========================================= */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
 
+/* Estilos del Resumen Final */
 .summary-list { text-align: left; margin-top: 20px; }
 .summary-item {
   background: #334155;
@@ -255,9 +217,17 @@ ul li {
     align-items: flex-start;
   }
   
-  h1 { font-size: 1.4rem; }
-  .card { padding: 20px 15px; }
-  #questionText { font-size: 1.2rem; }
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  #questionText {
+    font-size: 1.2rem;
+  }
   
   .quiz-header {
     flex-direction: column-reverse;
@@ -268,16 +238,21 @@ ul li {
   .btn-back {
     width: 100%;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
   }
 
-  .input-row {
-    flex-direction: column;
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .action-buttons button {
     flex: 1;
     font-size: 14px;
     padding: 12px 10px;
+  }
+
+  .summary-item {
+    padding: 15px 10px;
   }
 }

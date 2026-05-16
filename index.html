@@ -11,28 +11,27 @@
   <div class="container">
     <h1>REPASO REDES Y TECNOLOGÍAS DE LA INFORMACIÓN</h1>
 
+    <!-- Pantalla de inicio -->
     <div id="startScreen" class="card">
       <div class="alert-box">
         ADVERTENCIA: Este test puede contener algún error
       </div>
       <p>En este test podrás avanzar, retroceder y ver la corrección al final.</p>
       
-      <div class="settings-wrapper">
-        <div class="settings-group">
-          <label for="numQuestions">¿Cuántas preguntas deseas realizar?</label>
-          <div class="input-row">
-            <input type="number" id="numQuestions" min="1" value="10">
-            <small id="maxQuestionsHint" class="text-muted"></small>
-          </div>
-        </div>
+      <div class="settings-group">
+        <label for="numQuestions">¿Cuántas preguntas deseas realizar?</label>
+        <input type="number" id="numQuestions" min="1" value="10">
+        <small id="maxQuestionsHint" class="text-muted"></small>
       </div>
 
       <button class="btn-start" onclick="startQuiz()">Empezar Test</button>
     </div>
 
+    <!-- Pantalla del Test -->
     <div id="quizBox" class="card hidden">
+      <!-- Cabecera del test con botón de volver -->
       <div class="quiz-header">
-        <button class="btn-back" onclick="goBackToStart()">⬅ Volver al inicio</button>
+        <button class="btn-back" onclick="goBackToStart()">⬅ Volver</button>
         <span id="progress"></span>
       </div>
 
@@ -48,6 +47,7 @@
       </div>
     </div>
 
+    <!-- Pantalla de Resultados -->
     <div id="summaryBox" class="card hidden">
       <h2 id="scoreTitle"></h2>
       <p id="scoreSubtitle" class="text-muted"></p>
@@ -76,12 +76,12 @@
       allQuestions = data;
       
       const hint = document.getElementById("maxQuestionsHint");
-      if (typeof hint === "object" && hint) {
+      if (typeof hint === "object" && hint !== null) {
         hint.innerText = `(Máximo disponible: ${allQuestions.length})`;
       }
 
       const input = document.getElementById("numQuestions");
-      if (typeof input === "object" && input) {
+      if (typeof input === "object" && input !== null) {
         input.max = allQuestions.length;
         input.value = allQuestions.length; 
       }
@@ -101,9 +101,9 @@
     let selectedCount = allQuestions.length;
     const inputElement = document.getElementById("numQuestions");
     
-    if (typeof inputElement === "object" && inputElement) {
+    if (typeof inputElement === "object" && inputElement !== null) {
       const parsedValue = parseInt(inputElement.value, 10);
-      if (typeof parsedValue === "number" && Number.isNaN(parsedValue) === false) {
+      if (typeof parsedValue === "number" && isNaN(parsedValue) === false) {
         selectedCount = parsedValue;
       }
     }
