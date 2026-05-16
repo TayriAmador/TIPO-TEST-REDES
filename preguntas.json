@@ -1914,5 +1914,125 @@
       { "text": "Una arquitectura más sencilla de mantener, escalar y documentar.", "isCorrect": true },
       { "text": "Una disminución general del rendimiento debido a la separación de capas.", "isCorrect": false }
     ]
+  },
+
+
+
+
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre General",
+    "options": [
+      { "text": "En banda ancha la comunicación se modula empleando portadora digital.", "isCorrect": false },
+      { "text": "La dimensión de una red es proporcional al overhead de las tramas definidas por la tecnología.", "isCorrect": false },
+      { "text": "La dimensión de una red mejora si empleamos como protocolo de enlace de enlace PPP.", "isCorrect": false },
+      { "text": "El “throughput” es un concept asociado a tecnología Frame Relay.", "isCorrect": false },
+      { "text": "El “overhead” es un concepto asociado a trama.", "isCorrect": true },
+      { "text": "La carga y la dimensión de una red se relacionan de forma directamente proporcional.", "isCorrect": false },
+      { "text": "Ninguna es cierta.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre OSI",
+    "options": [
+      { "text": "Los niveles 5, 6 y 7 de OSI se pueden implementar en software.", "isCorrect": true },
+      { "text": "El nivel 2 de OSI se comunica a través de los campos de direccionamiento IP del datagrama.", "isCorrect": false },
+      { "text": "Modificar el MTU (Maximum Transmission Unit) puede afectar al rendimiento de la red.", "isCorrect": true },
+      { "text": "Los puertos (ports) definidos en TCP permiten hacer uso de la multiplexación.", "isCorrect": true },
+      { "text": "En un firewall también se pueden aplicar los niveles de OSI como referencia.", "isCorrect": true },
+      { "text": "Solo es cierta la número 4.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Tecnología",
+    "options": [
+      { "text": "ATM es una tecnología de Distribución.", "isCorrect": false },
+      { "text": "ATM es una tecnología, no un protocolo.", "isCorrect": false },
+      { "text": "Las redes SONET se pueden utilizar como solución de conectividad.", "isCorrect": true },
+      { "text": "Se puede desplegar una red corporativa con tecnología SONET y SDH.", "isCorrect": true },
+      { "text": "Las redes ATM permiten topología en anillo.", "isCorrect": true },
+      { "text": "Una red FTTH está pensada para rangos de velocidad en Gbps.", "isCorrect": true },
+      { "text": "La 2 y 3 son ciertas.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Protocolo",
+    "options": [
+      { "text": "Es posible utilizar IP sobre SONET", "isCorrect": true },
+      { "text": "Es posible utilizar IP y ATM en comunicaciones de cable submarino.", "isCorrect": true },
+      { "text": "Un protocolo síncrono es mejor que otro asíncrono.", "isCorrect": false },
+      { "text": "Los protocolos de red trabajan en conjunto para determinadas tecnologías.", "isCorrect": true },
+      { "text": "ATM es una tecnología no orientada a conexión.", "isCorrect": false },
+      { "text": "Solo es cierta la número 2.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Diseño I",
+    "options": [
+      { "text": "El nivel de acceso es correcto plantearlo en un entorno de edificio.", "isCorrect": true },
+      { "text": "Las diferentes redes de telecomunicación (operadores) requieren de puntos de intercambio de tráfico.", "isCorrect": true },
+      { "text": "La red de cableado estructurado de un edificio debe seguir un diseño jerárquico.", "isCorrect": true },
+      { "text": "Diseñar con escalabilidad de enlace es más importante que con fiabilidad de equipo.", "isCorrect": false },
+      { "text": "Diseñar con fiabilidad de enlace es más importante que con escalabilidad de equipo.", "isCorrect": false },
+      { "text": "Diseñar con interoperabilidad afecta a la escalabilidad y a la fiabilidad.", "isCorrect": false },
+      { "text": "Solo la 3 y 4 son ciertas.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Diseño II",
+    "options": [
+      { "text": "En un mal diseño de red los tiempos de espera son bajos en condiciones de carga “media-alta”.", "isCorrect": false },
+      { "text": "Es posible obtener concurrencia en redes SONET.", "isCorrect": true },
+      { "text": "Es posible obtener concurrencia en redes con topología en malla.", "isCorrect": true },
+      { "text": "Una “backbone” redundante puede estar compuesto por solo una tecnología de red.", "isCorrect": true },
+      { "text": "Los niveles de CORE son redundantes.", "isCorrect": false },
+      { "text": "Todas las anteriores son falsas.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Medios de transmisión",
+    "options": [
+      { "text": "Se puede emplear par trenzado para transmitir en banda base.", "isCorrect": true },
+      { "text": "Las redes ATM son más fiables que las redes Gigabit debido al tamaño de celda fijo.", "isCorrect": false },
+      { "text": "Si cambio el medio de transmisión afectará a la velocidad de transmisión.", "isCorrect": false },
+      { "text": "Es posible encontrar cable de 200 pares en un bucle de abonado de una zona residencial.", "isCorrect": true },
+      { "text": "La categoría de un cable UTP viene marcada por la velocidad de modulación y el tamaño de trama.", "isCorrect": false },
+      { "text": "El cableado UTP se elige en base a la modulación de la señal que ha de transmitir.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Voz/Telefonía",
+    "options": [
+      { "text": "La integración voz/datos de una red es el mismo concepto que telefonía IP.", "isCorrect": false },
+      { "text": "Podemos implementar telefonía IP sobre una determinada WAN.", "isCorrect": true },
+      { "text": "Algunas PBXs pueden incluir integración IP (telefonia IP).", "isCorrect": true },
+      { "text": "El protocolo IP está siempre presente en una comunicación de voz.", "isCorrect": false },
+      { "text": "Un proyecto de telefonía IP es más rentable que uno de telefonía basado en PBXs convencionales.", "isCorrect": false },
+      { "text": "La voz ha de pasar un proceso de cuantificación en una conversion analogica/digital.", "isCorrect": true },
+      { "text": "Solo es cierta la número 5.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Dispositivos",
+    "options": [
+      { "text": "Un gateway (pasarela) trabaja a 3 niveles.", "isCorrect": false },
+      { "text": "Un conmutador trabaja al mismo nivel que un router.", "isCorrect": false },
+      { "text": "Un conmutador multipuerto trabaja de forma más eficiente que un router multipuerto.", "isCorrect": false },
+      { "text": "Los conmutadores SONET son más rápidos que los SDH.", "isCorrect": false },
+      { "text": "Un dispositivo de internetworking puede no tener direcciones lógicas.", "isCorrect": true },
+      { "text": "Un conmutador (switch) equivale funcionalmente a un bridge multipuerto.", "isCorrect": true },
+      { "text": "Solo la 6 es cierta.", "isCorrect": false }
+    ]
+  },
+  {
+    "question": "Señale sólo aquellas respuestas estrictamente verdaderas sobre Seguridad",
+    "options": [
+      { "text": "La seguridad ha de ser siempre igual o superior a la interoperabilidad.", "isCorrect": false },
+      { "text": "Un proyecto de seguridad por red incluye listas de acceso.", "isCorrect": true },
+      { "text": "Un NAT puede ayudar a proteger una red corporativa.", "isCorrect": true },
+      { "text": "Emplear una DMZ externa e interna mejora el rendimiento de las redes corporativas.", "isCorrect": false },
+      { "text": "Entre redes interoperables es interesante aplicar mecanismos de seguridad.", "isCorrect": true },
+      { "text": "Entre dos routers de dos corporaciones se sitúa un firewall.", "isCorrect": false },
+      { "text": "Solo es cierta la numero 5.", "isCorrect": false }
+    ]
   }
 ]
