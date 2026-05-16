@@ -63,12 +63,12 @@
       <h2 id="questionText"></h2>
       <div id="optionsContainer" class="options-grid"></div>
 
+      <div id="feedbackBox" class="feedback-box hidden"></div>
+
       <div class="nav-buttons">
         <div class="action-buttons">
           <button id="prevBtn" class="btn-nav" onclick="prevQuestion()">⬅ Anterior</button>
-          
           <button id="checkBtn" class="btn-check hidden" onclick="checkAnswer()">Comprobar</button>
-          
           <button id="nextBtn" class="btn-next hidden" onclick="nextQuestion()">Siguiente ➡</button>
           <button id="finishBtn" class="btn-finish hidden" onclick="endQuiz()">Finalizar</button>
         </div>
@@ -89,7 +89,7 @@
   let current = 0;
   let userAnswers = []; 
   let hasChecked = []; 
-  let isStudyMode = false; // Variable para saber en qué modo estamos
+  let isStudyMode = false;
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -105,12 +105,12 @@
       allQuestions = data;
       
       const hint = document.getElementById("maxQuestionsHint");
-      if (typeof hint === "object" && hint) {
+      if (typeof hint === "object" && Boolean(hint) === true) {
         hint.innerText = `(Máximo disponible: ${allQuestions.length})`;
       }
 
       const input = document.getElementById("numQuestions");
-      if (typeof input === "object" && input) {
+      if (typeof input === "object" && Boolean(input) === true) {
         input.max = allQuestions.length;
         input.value = allQuestions.length; 
       }
@@ -127,7 +127,6 @@
       return;
     }
 
-    // Comprobar qué modo está seleccionado
     const modeRadios = document.getElementsByName("quizMode");
     isStudyMode = false;
     modeRadios.forEach(radio => {
@@ -141,7 +140,7 @@
     let selectedCount = allQuestions.length;
     const inputElement = document.getElementById("numQuestions");
     
-    if (typeof inputElement === "object" && inputElement) {
+    if (typeof inputElement === "object" && Boolean(inputElement) === true) {
       const parsedValue = parseInt(inputElement.value, 10);
       if (typeof parsedValue === "number" && Number.isNaN(parsedValue) === false) {
         selectedCount = parsedValue;
@@ -186,6 +185,19 @@
     container.innerHTML = "";
     
     const isChecked = hasChecked[current];
+    const feedbackBox = document.getElementById("feedbackBox");
+    
+    if (typeof feedbackBox === "object" && Boolean(feedbackBox) === true) {
+      feedbackBox.classList.add("hidden");
+      feedbackBox.innerHTML = "";
+    }
+
+    const userSelectedCurrent = userAnswers[current];
+    const correctIndices = q.options.map((opt, i) => opt.isCorrect === true ? i : undefined).filter(i => typeof i === "number");
+    
+    // Evaluamos el estado general de la respuesta del usuario
+    const selectedAnyWrong = userSelectedCurrent.some(i => q.options[i].isCorrect === false);
+    const missedAnyCorrect = correctIndices.some(i => userSelectedCurrent.includes(i) === false);
 
     q.options.forEach((opt, index) => {
       const label = document.createElement("label");
@@ -195,27 +207,37 @@
       checkbox.type = "checkbox";
       checkbox.value = index;
       
-      const isSelected = userAnswers[current].includes(index);
+      const isSelected = userSelectedCurrent.includes(index);
       const isCorrectOption = opt.isCorrect === true;
 
       if (isSelected === true) {
         checkbox.checked = true;
       }
 
-      // Lógica visual solo si es Modo Estudio Y ya se ha comprobado
       if (isStudyMode === true) {
         if (isChecked === true) {
           checkbox.disabled = true;
           
-          if (isCorrectOption === true) {
-            label.classList.add("correct-answer");
-          } else if (isSelected === true) {
-            label.classList.add("wrong-answer");
+          if (selectedAnyWrong === true) {
+            // Escenario: Fallo total (marcó alguna incorrecta)
+            // Rojo para las malas marcadas, Verde para todas las buenas (las haya marcado o no)
+            if (isSelected === true && isCorrectOption === false) {
+              label.classList.add("wrong-selected");
+            } else if (isCorrectOption === true) {
+              label.classList.add("correct-selected");
+            }
+          } else {
+            // Escenario: Iba por buen camino (no marcó ninguna mala)
+            // Si le faltan opciones, amarillo para las que le faltaron. Verde para las que sí acertó.
+            if (isCorrectOption === true && isSelected === true) {
+              label.classList.add("correct-selected");
+            } else if (isCorrectOption === true && isSelected === false) {
+              label.classList.add("missed-correct");
+            }
           }
         }
       }
 
-      // Si no está deshabilitado el checkbox, le añadimos el evento
       if (checkbox.disabled === false) {
         checkbox.onchange = () => {
           if (checkbox.checked === true) {
@@ -233,9 +255,30 @@
       container.appendChild(label);
     });
 
+    // Lógica para mostrar la caja de feedback abajo
+    if (isStudyMode === true && isChecked === true && typeof feedbackBox === "object" && Boolean(feedbackBox) === true) {
+      feedbackBox.classList.remove("hidden");
+      
+      if (selectedAnyWrong === true) {
+        feedbackBox.classList.add("wrong-feedback");
+        feedbackBox.classList.remove("correct-feedback");
+        feedbackBox.classList.remove("partial-feedback");
+        feedbackBox.innerHTML = "<strong>❌ Respuesta incorrecta.</strong> Has marcado opciones erróneas.";
+      } else if (missedAnyCorrect === true) {
+        feedbackBox.classList.add("partial-feedback");
+        feedbackBox.classList.remove("correct-feedback");
+        feedbackBox.classList.remove("wrong-feedback");
+        feedbackBox.innerHTML = "<strong>⚠️ Respuesta incompleta.</strong> Ibas bien, pero te han faltado opciones correctas por marcar.";
+      } else {
+        feedbackBox.classList.add("correct-feedback");
+        feedbackBox.classList.remove("wrong-feedback");
+        feedbackBox.classList.remove("partial-feedback");
+        feedbackBox.innerHTML = "<strong>✅ ¡Respuesta totalmente correcta!</strong>";
+      }
+    }
+
     document.getElementById("progress").innerText = `Pregunta ${current + 1} de ${questions.length}`;
 
-    // Gestión de botones según el modo
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
     const checkBtn = document.getElementById("checkBtn");
@@ -259,7 +302,6 @@
         }
       }
     } else {
-      // Si estamos en Modo Examen
       checkBtn.classList.add("hidden");
       if (current === questions.length - 1) {
         nextBtn.classList.add("hidden");
@@ -314,7 +356,13 @@
          const wasCorrect = correctIndices.includes(optIndex);
          
          if (wasCorrect === true || wasSelected === true) {
-            let icon = wasCorrect === true && wasSelected === true ? "✅" : (wasCorrect === true && wasSelected === false ? "⚠️ (Faltó)" : "❌ (Sobró)");
+            // Iconos del resumen final (sin exclamaciones lógicas)
+            let icon = "❌ (Sobró)";
+            if (wasCorrect === true && wasSelected === true) {
+               icon = "✅";
+            } else if (wasCorrect === true && wasSelected === false) {
+               icon = "⚠️ (Faltó)";
+            }
             summaryHTML += `<li>${icon} ${opt.text}</li>`;
          }
       });
