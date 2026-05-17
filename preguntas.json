@@ -1338,8 +1338,8 @@
       { "text": "Los puentes se diseñan para uso entre LAN's que usan protocolos idénticos en la capa física y MAC (de acceso al medio); aunque existen otros más sofisticados que permiten la conversión de formatos MAC diferentes (Ethernet-Token Ring por ejemplo).", "isCorrect": true },
       { "text": "Los conmutadores pueden tener la capacidad de aprender y almacenar las direcciones de la capa 2 (direcciones MAC) de los dispositivos alcanzables a través de cada uno de sus puertos.", "isCorrect": true },
       { "text": "La dirección MAC es utilizada en las tecnologías: Ethernet, 802.3 CSMA/CD, 802.5 o redes en anillo.", "isCorrect": true },
-      { "text": "La dirección MAC es utilizada en las tecnologías: 802.11 redes inalámbricas (Wi-Fi), Asynchronous Transfer Mode.", "isCorrect": false },
-      { "text": "Sólo la respuesta 1 es cierta..", "isCorrect": false }
+      { "text": "La dirección MAC es utilizada en las tecnologías: 802.11 redes inalámbricas (Wi-Fi), Asynchronous Transfer Mode.", "isCorrect": true },
+      { "text": "Sólo la respuesta 1 es cierta.", "isCorrect": false }
     ]
   },
   {
